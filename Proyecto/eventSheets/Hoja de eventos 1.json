@@ -1,0 +1,144 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movimiento de Jugador",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 973143439720642,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 986592942584858,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 990100468832238
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 588454032066268,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 235634388619780,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 791435818421280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 747881478596017,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 731227368702838,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 115209577910314
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 649149794951773,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 590293511113964,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 537653314442230
+				}
+			],
+			"sid": 205259800506240
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 435840113578022,
+					"parameters": {
+						"object": "Puerta1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 671581211692262,
+					"parameters": {
+						"layout": "Escena 2"
+					}
+				}
+			],
+			"sid": 705168298176174
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Hoja de eventos 2"
+		}
+	],
+	"sid": 281853114665437
+}
