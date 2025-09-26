@@ -56,7 +56,8 @@
 			"Teclado",
 			"TiledBackground",
 			"Sprite3",
-			"Puerta1"
+			"Puerta1",
+			"Sprite2"
 		],
 		"subfolders": []
 	},
