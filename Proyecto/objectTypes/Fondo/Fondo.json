@@ -1,28 +1,22 @@
 {
-	"name": "TiledBackground",
+	"name": "Fondo",
 	"plugin-id": "TiledBg",
-	"sid": 435301672713772,
+	"sid": 780188016262565,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Anchor",
-			"name": "Anchor",
-			"sid": 743028488440671
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 250,
-		"height": 250,
+		"width": 64,
+		"height": 64,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 6606423,
+		"imageSpriteId": 1471073,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

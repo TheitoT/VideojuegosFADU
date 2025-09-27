@@ -1,11 +1,17 @@
 {
-	"name": "Sprite2",
+	"name": "EnriqueElCubo",
 	"plugin-id": "Sprite",
-	"sid": 448815581904986,
+	"sid": 708600257486580,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direcciones",
+			"sid": 897243619571597
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,13 +26,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5816391,
+						"imageSpriteId": 5931017,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 246934880603036,
+				"sid": 293288501352796,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
