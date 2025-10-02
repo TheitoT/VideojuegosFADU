@@ -123,15 +123,37 @@
 			"actions": [
 				{
 					"id": "set-position",
-					"objectClass": "Camára",
-					"sid": 577339701722797,
+					"objectClass": "Camara",
+					"sid": 134732279961521,
 					"parameters": {
-						"x": "EnriqueElCubo.X + EnriquetaLaCuadrada.X / 2",
-						"y": "EnriqueElCubo.Y + EnriquetaLaCuadrada.Y / 2"
+						"x": "(EnriqueElCubo.X + EnriquetaLaCuadrada.X) / 2",
+						"y": "(EnriqueElCubo.Y + EnriquetaLaCuadrada.Y) / 2"
 					}
 				}
 			],
 			"sid": 214623307690266
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 771025501159042
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Camara",
+					"sid": 896317705303676,
+					"parameters": {
+						"x": "clamp (Camara.X, ViewportWidth(0)/2, LayoutWidth - ViewportWidth(0)/2) ",
+						"y": "clamp (Camara.Y, ViewportHeight(0)/2, LayoutHeight - ViewportHeight(0)/2)"
+					}
+				}
+			],
+			"sid": 804246439651892
 		}
 	],
 	"sid": 281853114665437
