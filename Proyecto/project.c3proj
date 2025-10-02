@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 44902,
-	"name": "Prueba 1",
+	"name": "AnimalitosDeLaReserva",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -33,13 +33,25 @@
 			"name": "8 Direction",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [
-			"Teclado"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -51,10 +63,19 @@
 			},
 			{
 				"items": [
-					"EnriqueElCubo"
+					"EnriqueElCubo",
+					"EnriquetaLaCuadrada"
 				],
 				"subfolders": [],
 				"name": "Personajes"
+			},
+			{
+				"items": [
+					"Camára",
+					"Teclado"
+				],
+				"subfolders": [],
+				"name": "Herramientas"
 			}
 		]
 	},
@@ -235,7 +256,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 1280,
-	"viewportHeight": 720,
+	"viewportWidth": 320,
+	"viewportHeight": 400,
 	"firstLayout": null
 }

@@ -1,20 +1,20 @@
 {
-	"name": "EnriqueElCubo",
+	"name": "Camára",
 	"plugin-id": "Sprite",
-	"sid": 708600257486580,
+	"sid": 688592357968901,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "EightDir",
-			"name": "8Direcciones",
-			"sid": 897243619571597
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 440082913059991
 		},
 		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 717034598484877
+			"behaviorId": "scrollto",
+			"name": "ScrollTo2",
+			"sid": 927267935175148
 		}
 	],
 	"effectTypes": [],
@@ -31,13 +31,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5931017,
+						"imageSpriteId": 4522962,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 293288501352796,
+				"sid": 419622008546364,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

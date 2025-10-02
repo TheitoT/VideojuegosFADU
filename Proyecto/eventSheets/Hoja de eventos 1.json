@@ -110,6 +110,28 @@
 				}
 			],
 			"sid": 205259800506240
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 168456088685057
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Camára",
+					"sid": 577339701722797,
+					"parameters": {
+						"x": "EnriqueElCubo.X + EnriquetaLaCuadrada.X / 2",
+						"y": "EnriqueElCubo.Y + EnriquetaLaCuadrada.Y / 2"
+					}
+				}
+			],
+			"sid": 214623307690266
 		}
 	],
 	"sid": 281853114665437

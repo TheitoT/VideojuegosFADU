@@ -31,6 +31,12 @@
 								"default-controls": false,
 								"enabled": true
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
 						}
 					},
 					"instanceFolderItem": {
