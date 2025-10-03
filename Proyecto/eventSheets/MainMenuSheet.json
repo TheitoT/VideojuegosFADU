@@ -1,0 +1,32 @@
+{
+	"name": "MainMenuSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 573603538152161,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Jugar"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 203373844861995,
+					"parameters": {
+						"layout": "Escena 1"
+					}
+				}
+			],
+			"sid": 799652392223327
+		}
+	],
+	"sid": 705009537524894
+}

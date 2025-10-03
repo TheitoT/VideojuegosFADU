@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -63,19 +70,35 @@
 			},
 			{
 				"items": [
-					"EnriqueElCubo",
-					"EnriquetaLaCuadrada"
-				],
-				"subfolders": [],
-				"name": "Personajes"
-			},
-			{
-				"items": [
 					"Camara",
-					"Teclado"
+					"Teclado",
+					"Mouse"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"EnriqueElCubo",
+							"EnriquetaLaCuadrada"
+						],
+						"subfolders": [],
+						"name": "Personajes"
+					},
+					{
+						"items": [
+							"Jugar",
+							"Opciones",
+							"Titulo"
+						],
+						"subfolders": [],
+						"name": "SpritesMenu"
+					}
+				],
+				"name": "Sprites"
 			}
 		]
 	},
@@ -89,13 +112,15 @@
 	"layouts": {
 		"items": [
 			"Escena 1",
-			"Escena 2"
+			"Escena 2",
+			"MainMenu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Hoja de eventos 1"
+			"Hoja de eventos 1",
+			"MainMenuSheet"
 		],
 		"subfolders": []
 	},
@@ -258,5 +283,5 @@
 	},
 	"viewportWidth": 320,
 	"viewportHeight": 400,
-	"firstLayout": null
+	"firstLayout": "MainMenu"
 }
