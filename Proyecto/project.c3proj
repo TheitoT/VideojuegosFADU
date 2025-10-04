@@ -9,7 +9,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -30,35 +30,44 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Fondo en mosaico",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mapa de teselas",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direction",
+			"name": "8 Direcciones",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "scrollto",
-			"name": "Scroll To",
+			"name": "Desplazar hasta",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Sólido",
 			"author": "Scirra",
 			"bundled": false
 		}
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"MapaDeTeselas"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -72,7 +81,8 @@
 				"items": [
 					"Camara",
 					"Teclado",
-					"Mouse"
+					"Mouse",
+					"ParedesCamara"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -281,7 +291,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 320,
-	"viewportHeight": 400,
+	"viewportWidth": 640,
+	"viewportHeight": 360,
 	"firstLayout": "MainMenu"
 }
