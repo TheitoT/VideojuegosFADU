@@ -1,7 +1,7 @@
 {
-	"name": "Hab_Final_Derecha",
+	"name": "PUNTO_A",
 	"plugin-id": "Sprite",
-	"sid": 132679593876899,
+	"sid": 876354734172025,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,35 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1217,
-						"height": 577,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4568767,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0.02772963604852686,
-								1,
-								0.512998266897747,
-								0.5225965488907148,
-								1,
-								0,
-								1
-							]
-						},
+						"imageSpriteId": 3231791,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 131039598837941,
+				"sid": 420041196710105,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

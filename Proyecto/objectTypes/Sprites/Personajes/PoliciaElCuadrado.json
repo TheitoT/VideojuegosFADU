@@ -1,0 +1,115 @@
+{
+	"name": "PoliciaElCuadrado",
+	"plugin-id": "Sprite",
+	"sid": 837044368791840,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 146933166534912
+		},
+		{
+			"name": "PatrolTarget",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 587673545517657
+		},
+		{
+			"name": "HomeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 194432344522259
+		},
+		{
+			"name": "HomeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 855085500466312
+		},
+		{
+			"name": "LostTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 574551545322674
+		},
+		{
+			"name": "SpeedPatrol",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 840029559007825
+		},
+		{
+			"name": "SpeedChase",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 897549924714685
+		},
+		{
+			"name": "ViewRange",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 657025307174339
+		},
+		{
+			"name": "ViewAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 630085385707419
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 275421836526491
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 344526949053216
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4986275,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 238797425315673,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

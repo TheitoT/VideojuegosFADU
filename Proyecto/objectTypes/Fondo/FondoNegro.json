@@ -1,30 +1,23 @@
 {
-	"name": "Tilemap",
-	"plugin-id": "Tilemap",
-	"sid": 870879257110705,
+	"name": "FondoNegro",
+	"plugin-id": "TiledBg",
+	"sid": 588261996394720,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 265019397480584
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 230,
-		"height": 300,
+		"width": 250,
+		"height": 250,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 1604804,
+		"imageSpriteId": 1683174,
 		"useCollisionPoly": true,
 		"tag": ""
-	},
-	"tile-collision-polys": {}
+	}
 }

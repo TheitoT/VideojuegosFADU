@@ -50,6 +50,20 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -65,15 +79,13 @@
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [
-			"Tilemap",
-			"TiledBackground"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
 					"Fondo",
-					"Hab_Final_Derecha"
+					"FondoNegro",
+					"ParedesTILES"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -83,7 +95,9 @@
 					"Camara",
 					"Teclado",
 					"Mouse",
-					"ParedesCamara"
+					"ParedesCamara",
+					"PUNTO_A",
+					"PUNTO_B"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -94,7 +108,8 @@
 					{
 						"items": [
 							"EnriqueElCubo",
-							"EnriquetaLaCuadrada"
+							"EnriquetaLaCuadrada",
+							"PoliciaElCuadrado"
 						],
 						"subfolders": [],
 						"name": "Personajes"
