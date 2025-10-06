@@ -85,7 +85,8 @@
 				"items": [
 					"Fondo",
 					"FondoNegro",
-					"ParedesTILES"
+					"ParedesTILES",
+					"Tilemap"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -139,7 +140,8 @@
 		"items": [
 			"Escena 1",
 			"Escena 2",
-			"MainMenu"
+			"MainMenu",
+			"PruebaMapaChico"
 		],
 		"subfolders": []
 	},
