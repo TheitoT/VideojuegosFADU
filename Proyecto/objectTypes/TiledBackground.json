@@ -1,24 +1,23 @@
 {
-	"name": "MapaDeTeselas",
-	"plugin-id": "Tilemap",
-	"sid": 762246214009439,
+	"name": "TiledBackground",
+	"plugin-id": "TiledBg",
+	"sid": 588261996394720,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
-		"width": 230,
-		"height": 240,
+		"width": 250,
+		"height": 250,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 4629530,
+		"imageSpriteId": 1683174,
 		"useCollisionPoly": true,
 		"tag": ""
-	},
-	"tile-collision-polys": {}
+	}
 }
