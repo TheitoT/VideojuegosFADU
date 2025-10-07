@@ -81,11 +81,11 @@
 					},
 					"ownData": {
 						"tilemapData": {
-							"width": 40,
+							"width": 20,
 							"height": 22,
-							"max-width": 79,
+							"max-width": 80,
 							"max-height": 33,
-							"data": "165x0,1,9x6,11,22x0,3,9x0,16,22x0,3,2x0,5x35hd,2x0,16,22x0,3,2x0,35,6x0,16,22x0,3,2x0,35,29x0,3,2x0,35,29x0,3,2x0,35,29x0,3,2x0,35,6x0,16,22x0,3,2x0,5x35vd,2x0,16,22x0,3,9x0,16,22x0,5,9x10,15,2101x0"
+							"data": "1,20x6,11,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,3x0,17x28,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,32x0,3,32x0,3,32x0,3,32x0,3,20x0,23,11x0,3,20x0,23,11x0,3,3x0,17x28,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,5,20x10,15,1991x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -103,7 +103,7 @@
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 1280,
+						"width": 640,
 						"height": 720,
 						"originX": 0,
 						"originY": 0,
@@ -147,10 +147,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512,
+						"x": 640,
 						"y": 0,
-						"width": 128,
-						"height": 384,
+						"width": 448,
+						"height": 736,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -194,10 +194,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
+						"x": -320,
 						"y": 0,
-						"width": 160,
-						"height": 384,
+						"width": 320,
+						"height": 736,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -250,7 +250,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 320,
+						"x": 288,
 						"y": 320,
 						"width": 32,
 						"height": 32,
@@ -386,7 +386,7 @@
 					"locked": false,
 					"world": {
 						"x": 320,
-						"y": 375,
+						"y": 736,
 						"width": 649,
 						"height": 18,
 						"originX": 0.5,
@@ -530,6 +530,54 @@
 							1
 						],
 						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Camara",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 75,
+					"sid": 334029299052869,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"ScrollTo2": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 334029299052869,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 320,
+						"y": 256,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
