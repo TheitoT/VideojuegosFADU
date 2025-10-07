@@ -79,7 +79,10 @@
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Sprite",
+			"desalvo"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -141,7 +144,8 @@
 			"Escena 1",
 			"Escena 2",
 			"MainMenu",
-			"PruebaMapaChico"
+			"PruebaMapaChico",
+			"Desalvo"
 		],
 		"subfolders": []
 	},
