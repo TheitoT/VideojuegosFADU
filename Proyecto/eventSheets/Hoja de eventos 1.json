@@ -154,6 +154,27 @@
 				}
 			],
 			"sid": 804246439651892
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 394290235451673
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 160637959795733,
+					"parameters": {
+						"object": "EnriqueElCubo"
+					}
+				}
+			],
+			"sid": 360347413457466
 		}
 	],
 	"sid": 281853114665437

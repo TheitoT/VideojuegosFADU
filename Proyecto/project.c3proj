@@ -81,7 +81,8 @@
 	"objectTypes": {
 		"items": [
 			"Sprite",
-			"desalvo"
+			"desalvo",
+			"DesalvoChico"
 		],
 		"subfolders": [
 			{
@@ -145,7 +146,8 @@
 			"Escena 2",
 			"MainMenu",
 			"PruebaMapaChico",
-			"Desalvo"
+			"Desalvo",
+			"Desalvo Chico"
 		],
 		"subfolders": []
 	},

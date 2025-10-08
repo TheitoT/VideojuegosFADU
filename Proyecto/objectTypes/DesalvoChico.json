@@ -1,0 +1,30 @@
+{
+	"name": "DesalvoChico",
+	"plugin-id": "Tilemap",
+	"sid": 613052086131716,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 889954215120061
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 160,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8402016,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}
