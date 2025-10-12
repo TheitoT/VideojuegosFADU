@@ -112,6 +112,25 @@
 			"sid": 205259800506240
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camara y posición",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 692312937707118
+		},
+		{
+			"eventType": "variable",
+			"name": "taLlevando",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 741231857504654
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -175,6 +194,88 @@
 				}
 			],
 			"sid": 360347413457466
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "EnriqueElCubo",
+					"sid": 556612106030428,
+					"parameters": {
+						"object": "RefEscuadra"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PressE",
+					"sid": 961024887618354,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 487451016560462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 621814735742354,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "EnriqueElCubo",
+					"sid": 357883858219874,
+					"parameters": {
+						"object": "Escuadra"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 961919477828991,
+					"parameters": {
+						"first-value": "taLlevando",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 445082215209107,
+					"parameters": {
+						"variable": "taLlevando",
+						"value": "true"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Escuadra",
+					"sid": 125475659290759,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "EnriqueElCubo",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 480965532639422
 		}
 	],
 	"sid": 281853114665437

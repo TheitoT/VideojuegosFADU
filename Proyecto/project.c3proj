@@ -64,6 +64,20 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -127,6 +141,15 @@
 						],
 						"subfolders": [],
 						"name": "SpritesMenu"
+					},
+					{
+						"items": [
+							"Escuadra",
+							"RefEscuadra",
+							"PressE"
+						],
+						"subfolders": [],
+						"name": "Objetos"
 					}
 				],
 				"name": "Sprites"

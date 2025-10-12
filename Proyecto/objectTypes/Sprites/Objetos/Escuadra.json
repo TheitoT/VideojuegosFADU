@@ -1,0 +1,66 @@
+{
+	"name": "Escuadra",
+	"plugin-id": "Sprite",
+	"sid": 640536445548119,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "isLifted",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 849008731337742
+		},
+		{
+			"name": "isThrown",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 580211110066829
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 259572341937260
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 623406319571490
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 221987,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 724453409633931,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
