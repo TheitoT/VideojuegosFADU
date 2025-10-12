@@ -117,7 +117,73 @@
 			"title": "Camara y posición",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 598558533567734
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Camara",
+							"sid": 458440570718846,
+							"parameters": {
+								"x": "(EnriqueElCubo.X + EnriquetaLaCuadrada.X) / 2",
+								"y": "(EnriqueElCubo.Y + EnriquetaLaCuadrada.Y) / 2"
+							}
+						}
+					],
+					"sid": 358043026303835
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 149544576121696
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Camara",
+							"sid": 404952440905351,
+							"parameters": {
+								"x": "clamp (Camara.X, ViewportWidth(0)/2, LayoutWidth - ViewportWidth(0)/2) ",
+								"y": "clamp (Camara.Y, ViewportHeight(0)/2, LayoutHeight - ViewportHeight(0)/2)"
+							}
+						}
+					],
+					"sid": 163750006458337
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 142616308099747
+						}
+					],
+					"actions": [
+						{
+							"id": "scroll-to-object",
+							"objectClass": "System",
+							"sid": 400606240160565,
+							"parameters": {
+								"object": "EnriqueElCubo"
+							}
+						}
+					],
+					"sid": 945616259865607
+				}
+			],
 			"sid": 692312937707118
 		},
 		{
@@ -128,154 +194,99 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 741231857504654
+			"sid": 156303151920283
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Agarrar y soltar cosas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 168456088685057
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Camara",
-					"sid": 134732279961521,
-					"parameters": {
-						"x": "(EnriqueElCubo.X + EnriquetaLaCuadrada.X) / 2",
-						"y": "(EnriqueElCubo.Y + EnriquetaLaCuadrada.Y) / 2"
-					}
-				}
-			],
-			"sid": 214623307690266
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 771025501159042
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Camara",
-					"sid": 896317705303676,
-					"parameters": {
-						"x": "clamp (Camara.X, ViewportWidth(0)/2, LayoutWidth - ViewportWidth(0)/2) ",
-						"y": "clamp (Camara.Y, ViewportHeight(0)/2, LayoutHeight - ViewportHeight(0)/2)"
-					}
-				}
-			],
-			"sid": 804246439651892
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 394290235451673
-				}
-			],
-			"actions": [
-				{
-					"id": "scroll-to-object",
-					"objectClass": "System",
-					"sid": 160637959795733,
-					"parameters": {
-						"object": "EnriqueElCubo"
-					}
-				}
-			],
-			"sid": 360347413457466
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "EnriqueElCubo",
-					"sid": 556612106030428,
-					"parameters": {
-						"object": "RefEscuadra"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "PressE",
-					"sid": 961024887618354,
-					"parameters": {
-						"visibility": "visible"
-					}
-				}
-			],
-			"sid": 487451016560462
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Teclado",
-					"sid": 621814735742354,
-					"parameters": {
-						"key": 69
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 306212230357395,
+							"parameters": {
+								"object": "RefEscuadra"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PressE",
+							"sid": 644969546781894,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 427524618027069
 				},
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "EnriqueElCubo",
-					"sid": 357883858219874,
-					"parameters": {
-						"object": "Escuadra"
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 961919477828991,
-					"parameters": {
-						"first-value": "taLlevando",
-						"comparison": 0,
-						"second-value": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 155822616296055,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 579642666823741,
+							"parameters": {
+								"object": "Escuadra"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 630403396141199,
+							"parameters": {
+								"first-value": "taLlevando",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 396967807230265,
+							"parameters": {
+								"variable": "taLlevando",
+								"value": "true"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Escuadra",
+							"sid": 166013331146854,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "EnriqueElCubo",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 714614493133287
 				}
 			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 445082215209107,
-					"parameters": {
-						"variable": "taLlevando",
-						"value": "true"
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "Escuadra",
-					"sid": 125475659290759,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "EnriqueElCubo",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				}
-			],
-			"sid": 480965532639422
+			"sid": 266572112322318
 		}
 	],
 	"sid": 281853114665437
