@@ -1,7 +1,7 @@
 {
-	"name": "Tilemap",
+	"name": "ParedesFADU",
 	"plugin-id": "Tilemap",
-	"sid": 137911540558744,
+	"sid": 870879257110705,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -9,12 +9,12 @@
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 576716830409951
+			"sid": 265019397480584
 		}
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 352,
+		"width": 230,
 		"height": 300,
 		"originX": 0.5,
 		"originY": 0.5,
@@ -22,7 +22,7 @@
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 4197021,
+		"imageSpriteId": 1604804,
 		"useCollisionPoly": true,
 		"tag": ""
 	},

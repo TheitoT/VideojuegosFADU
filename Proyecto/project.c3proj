@@ -93,18 +93,17 @@
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [
-			"Sprite",
-			"desalvo",
-			"DesalvoChico"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
 					"Fondo",
 					"FondoNegro",
-					"ParedesTILES",
-					"Tilemap"
+					"ParedesFADU",
+					"desalvo",
+					"DesalvoChico",
+					"PuertasFADU",
+					"Sprite"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -128,7 +127,8 @@
 						"items": [
 							"EnriqueElCubo",
 							"EnriquetaLaCuadrada",
-							"PoliciaElCuadrado"
+							"PoliciaElCuadrado",
+							"Estudiante1"
 						],
 						"subfolders": [],
 						"name": "Personajes"
@@ -165,10 +165,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Escena 1",
-			"Escena 2",
+			"FADU",
 			"MainMenu",
-			"PruebaMapaChico",
 			"Desalvo",
 			"Desalvo Chico"
 		],
