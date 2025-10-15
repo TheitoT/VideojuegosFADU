@@ -2,16 +2,6 @@
 	"name": "Hoja de eventos 1",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "UID_objeto_agarrado",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 432012875850657
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -197,6 +187,16 @@
 			"sid": 692312937707118
 		},
 		{
+			"eventType": "variable",
+			"name": "taLlevando",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 156303151920283
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Agarrar y soltar cosas",
@@ -233,197 +233,60 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Teclado",
-							"sid": 145665551814214,
+							"sid": 155822616296055,
 							"parameters": {
 								"key": 69
 							}
-						}
-					],
-					"actions": [],
-					"sid": 184752676217946,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 603514360597586,
-									"parameters": {
-										"variable": "UID_objeto_agarrado",
-										"comparison": 1,
-										"value": "0"
-									}
-								},
-								{
-									"id": "pick-by-unique-id",
-									"objectClass": "Escuadra",
-									"sid": 565298380176707,
-									"parameters": {
-										"unique-id": "UID_objeto_agarrado"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "unpin",
-									"objectClass": "Escuadra",
-									"sid": 632359565731589,
-									"behaviorType": "Pin"
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 926619679938650,
-									"parameters": {
-										"variable": "UID_objeto_agarrado",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 100603403219767
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 939550181420174
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "EnriqueElCubo",
-									"sid": 990647672315495,
-									"parameters": {
-										"object": "Escuadra"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "pin-to-object-properties",
-									"objectClass": "Escuadra",
-									"sid": 260243690519283,
-									"behaviorType": "Pin",
-									"parameters": {
-										"pin-to": "EnriqueElCubo",
-										"x": true,
-										"y": true,
-										"angle": true,
-										"width-type": "no",
-										"height-type": "no",
-										"z": false
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 798959992503662,
-									"parameters": {
-										"variable": "UID_objeto_agarrado",
-										"value": "Escuadra.UID"
-									}
-								}
-							],
-							"sid": 299350014695722
-						}
-					]
-				}
-			],
-			"sid": 266572112322318
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 146925400335223
-				}
-			],
-			"actions": [],
-			"sid": 223648994670098,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 579642666823741,
+							"parameters": {
+								"object": "Escuadra"
+							}
+						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 440981254076842,
+							"sid": 630403396141199,
 							"parameters": {
-								"first-value": "LayoutName",
+								"first-value": "taLlevando",
 								"comparison": 0,
-								"second-value": "\"Escena 1\""
+								"second-value": "0"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "play",
-							"objectClass": "PlantaBajaMusic",
-							"sid": 624784921596813,
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 396967807230265,
 							"parameters": {
-								"audio-file": "Planta baja",
-								"loop": "looping",
-								"volume": "0",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"variable": "taLlevando",
+								"value": "true"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Escuadra",
+							"sid": 166013331146854,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "EnriqueElCubo",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
 							}
 						}
 					],
-					"sid": 776780959540896
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "EnriqueElCubo",
-					"sid": 347830140505470,
-					"parameters": {
-						"object": "RefPuerta"
-					}
+					"sid": 714614493133287
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 113278388558473,
-					"parameters": {
-						"layout": "Desalvo"
-					}
-				}
-			],
-			"sid": 535494319675504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "EnriquetaLaCuadrada",
-					"sid": 746975109065422,
-					"parameters": {
-						"object": "RefPuerta"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 754689774133870,
-					"parameters": {
-						"layout": "Desalvo"
-					}
-				}
-			],
-			"sid": 107771034915738
+			"sid": 266572112322318
 		}
 	],
 	"sid": 281853114665437
