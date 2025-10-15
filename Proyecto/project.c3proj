@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -93,17 +100,20 @@
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Sprite",
+			"desalvo",
+			"DesalvoChico",
+			"Cuarto",
+			"RefPuerta"
+		],
 		"subfolders": [
 			{
 				"items": [
 					"Fondo",
 					"FondoNegro",
-					"ParedesFADU",
-					"desalvo",
-					"DesalvoChico",
-					"PuertasFADU",
-					"Sprite"
+					"ParedesTILES",
+					"Tilemap"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -115,7 +125,8 @@
 					"Mouse",
 					"ParedesCamara",
 					"PUNTO_A",
-					"PUNTO_B"
+					"PUNTO_B",
+					"PlantaBajaMusic"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -127,8 +138,7 @@
 						"items": [
 							"EnriqueElCubo",
 							"EnriquetaLaCuadrada",
-							"PoliciaElCuadrado",
-							"Estudiante1"
+							"PoliciaElCuadrado"
 						],
 						"subfolders": [],
 						"name": "Personajes"
@@ -165,8 +175,10 @@
 	},
 	"layouts": {
 		"items": [
-			"FADU",
+			"Escena 1",
+			"Escena 2",
 			"MainMenu",
+			"PruebaMapaChico",
 			"Desalvo",
 			"Desalvo Chico"
 		],
@@ -189,7 +201,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Planta baja.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 780100006791164,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
