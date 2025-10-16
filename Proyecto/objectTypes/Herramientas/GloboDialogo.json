@@ -1,41 +1,39 @@
 {
-	"name": "Estudiante1",
+	"name": "GloboDialogo",
 	"plugin-id": "Sprite",
-	"sid": 973775759769631,
+	"sid": 697911801848719,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 735054123092339
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 147890210037984
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 32,
+						"width": 96,
+						"height": 64,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9956777,
+						"imageSpriteId": 3204702,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 158912345490734,
-				"name": "Animation 1",
+				"sid": 320672059699850,
+				"name": "GloboDialogo",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

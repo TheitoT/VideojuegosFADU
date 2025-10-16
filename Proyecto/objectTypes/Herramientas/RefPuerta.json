@@ -1,40 +1,50 @@
 {
-	"name": "Estudiante1",
+	"name": "RefPuerta",
 	"plugin-id": "Sprite",
-	"sid": 973775759769631,
+	"sid": 846646374206968,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
+	"instanceVariables": [],
+	"behaviorTypes": [
 		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 735054123092339
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 283465813579040
 		}
 	],
-	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 131,
+						"height": 35,
+						"originX": 0.9618320610687023,
+						"originY": 2.657142857142857,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9956777,
+						"imageSpriteId": 2610491,
+						"collisionPoly": {
+							"points": [
+								0.007633587786259542,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.007633587786259542,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 158912345490734,
+				"sid": 346728748236037,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

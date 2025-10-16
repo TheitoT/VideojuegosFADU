@@ -1,22 +1,28 @@
 {
-	"name": "PuertasFADU",
+	"name": "ParedesTILES",
 	"plugin-id": "Tilemap",
-	"sid": 405908356817303,
+	"sid": 870879257110705,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 265019397480584
+		}
+	],
 	"effectTypes": [],
 	"image": {
-		"width": 256,
-		"height": 64,
+		"width": 230,
+		"height": 300,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
 		"fileType": "image/png",
-		"imageSpriteId": 7791556,
+		"imageSpriteId": 1604804,
 		"useCollisionPoly": true,
 		"tag": ""
 	},
