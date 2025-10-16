@@ -718,6 +718,58 @@
 								}
 							],
 							"sid": 378137872804792
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "GloboDialogo",
+									"sid": 934439605865112,
+									"parameters": {
+										"which": "nearest",
+										"x": "EnriqueElCubo.X",
+										"y": "EnriqueElCubo.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "GloboDialogo",
+									"sid": 553242726221503,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 916972902816607
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "Dialogo",
+									"sid": 153043000005927,
+									"parameters": {
+										"which": "nearest",
+										"x": "EnriqueElCubo.X",
+										"y": "EnriqueElCubo.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo",
+									"sid": 312234794176830,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 313847316648811
 						}
 					]
 				},
@@ -747,58 +799,6 @@
 						}
 					],
 					"sid": 501331067453493
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "GloboDialogo",
-							"sid": 389808719148538,
-							"parameters": {
-								"which": "nearest",
-								"x": "EnriqueElCubo.X",
-								"y": "EnriqueElCubo.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 132533197228947,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 620003841004174
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "Dialogo",
-							"sid": 540923340822511,
-							"parameters": {
-								"which": "nearest",
-								"x": "EnriqueElCubo.X",
-								"y": "EnriqueElCubo.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 327978703401411,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 924624543610337
 				},
 				{
 					"eventType": "block",
