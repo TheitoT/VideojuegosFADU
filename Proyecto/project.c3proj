@@ -115,12 +115,8 @@
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
 		"items": [
-			"TXT_Opciones1",
-			"Sprite5",
-			"BotónInutil",
-			"Sprite6",
-			"Sprite7",
-			"Sprite8"
+			"Text",
+			"Text2"
 		],
 		"subfolders": [
 			{
@@ -177,7 +173,13 @@
 							"FondoMenu",
 							"FondoOpciones",
 							"TXT_Jugar",
-							"TXT_Opciones"
+							"TXT_Opciones",
+							"BotónInutil",
+							"CerrarOpciones",
+							"NaranjaInutil",
+							"CirculitoInutil",
+							"ApagadoInutil",
+							"TXT_Opciones1"
 						],
 						"subfolders": [],
 						"name": "SpritesMenu"
@@ -193,6 +195,13 @@
 						],
 						"subfolders": [],
 						"name": "Objetos"
+					},
+					{
+						"items": [
+							"NegroPausa"
+						],
+						"subfolders": [],
+						"name": "HUD"
 					}
 				],
 				"name": "Sprites"
@@ -350,7 +359,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,

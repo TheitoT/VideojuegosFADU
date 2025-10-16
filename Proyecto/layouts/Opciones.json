@@ -107,7 +107,7 @@
 					}
 				},
 				{
-					"type": "Sprite5",
+					"type": "CerrarOpciones",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -181,7 +181,7 @@
 					}
 				},
 				{
-					"type": "Sprite6",
+					"type": "NaranjaInutil",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -218,7 +218,7 @@
 					}
 				},
 				{
-					"type": "Sprite7",
+					"type": "CirculitoInutil",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -292,7 +292,7 @@
 					}
 				},
 				{
-					"type": "Sprite8",
+					"type": "ApagadoInutil",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -329,7 +329,7 @@
 					}
 				},
 				{
-					"type": "Sprite7",
+					"type": "CirculitoInutil",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

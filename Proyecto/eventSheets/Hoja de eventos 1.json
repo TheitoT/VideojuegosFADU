@@ -32,6 +32,16 @@
 			"sid": 126346601230661
 		},
 		{
+			"eventType": "variable",
+			"name": "ESC_Pausa",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 560177768661590
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -962,6 +972,167 @@
 				}
 			],
 			"sid": 650045581112483
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ESC_MENU",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 122010436737552,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 225377469770517,
+							"parameters": {
+								"variable": "ESC_Pausa"
+							}
+						}
+					],
+					"sid": 764586917889080
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 496730553822311,
+							"parameters": {
+								"variable": "ESC_Pausa"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 534558378513155,
+							"parameters": {
+								"layer": "\"HUD\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 277484240314271,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 301156708987383
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 564575878527223,
+							"parameters": {
+								"variable": "ESC_Pausa"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 953498426241140,
+							"parameters": {
+								"layer": "\"HUD\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 559806186962562,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 659511541333770
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 433245255527804,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Opciones"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 430574374272173,
+							"parameters": {
+								"layout": "MainMenu"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 671565640195535,
+							"parameters": {
+								"variable": "ESC_Pausa"
+							}
+						}
+					],
+					"sid": 988577275537860
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 932208107320878,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CerrarOpciones"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 766379669084738,
+							"parameters": {
+								"variable": "ESC_Pausa"
+							}
+						}
+					],
+					"sid": 906368822648136
+				}
+			],
+			"sid": 294955911698957
 		}
 	],
 	"sid": 281853114665437

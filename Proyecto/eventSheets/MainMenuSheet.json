@@ -63,7 +63,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Sprite5"
+						"object-clicked": "CerrarOpciones"
 					}
 				}
 			],
