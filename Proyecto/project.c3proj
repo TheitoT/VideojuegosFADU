@@ -115,8 +115,12 @@
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
 		"items": [
-			"Sprite2",
-			"Dialogo"
+			"TXT_Opciones1",
+			"Sprite5",
+			"BotónInutil",
+			"Sprite6",
+			"Sprite7",
+			"Sprite8"
 		],
 		"subfolders": [
 			{
@@ -143,7 +147,11 @@
 					"PUNTO_B",
 					"PlantaBajaMusic",
 					"RefPuerta",
-					"GloboDialogo"
+					"GloboDialogo",
+					"Dialogo",
+					"Press_E",
+					"PuertaAFADU",
+					"PuertaAlumnos"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -165,7 +173,11 @@
 						"items": [
 							"Jugar",
 							"Opciones",
-							"Titulo"
+							"Titulo",
+							"FondoMenu",
+							"FondoOpciones",
+							"TXT_Jugar",
+							"TXT_Opciones"
 						],
 						"subfolders": [],
 						"name": "SpritesMenu"
@@ -174,7 +186,10 @@
 						"items": [
 							"Escuadra",
 							"RefEscuadra",
-							"PressE"
+							"PressE",
+							"Sprite3",
+							"Sprite4",
+							"Sprite2"
 						],
 						"subfolders": [],
 						"name": "Objetos"
@@ -195,9 +210,10 @@
 		"items": [
 			"FADU",
 			"MainMenu",
-			"PruebaMapaChico",
+			"Alumnos",
 			"Desalvo",
-			"Desalvo Chico"
+			"Desalvo Chico",
+			"Opciones"
 		],
 		"subfolders": []
 	},

@@ -1,39 +1,33 @@
 {
-	"name": "GloboDialogo",
+	"name": "PuertaAlumnos",
 	"plugin-id": "Sprite",
-	"sid": 697911801848719,
+	"sid": 932763484090654,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 147890210037984
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 576,
-						"height": 96,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 32,
+						"height": 32,
+						"originX": 0,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9026944,
+						"imageSpriteId": 1105970,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 320672059699850,
-				"name": "GloboDialogo",
+				"sid": 670808950391436,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

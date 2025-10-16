@@ -26,6 +26,58 @@
 				}
 			],
 			"sid": 799652392223327
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 728719585603855,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Opciones"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 754055619732651,
+					"parameters": {
+						"layout": "Opciones"
+					}
+				}
+			],
+			"sid": 353569382874252
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 921960460267648,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 529213112592114,
+					"parameters": {
+						"layout": "MainMenu"
+					}
+				}
+			],
+			"sid": 907313860127217
 		}
 	],
 	"sid": 705009537524894

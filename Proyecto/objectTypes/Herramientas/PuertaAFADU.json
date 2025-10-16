@@ -1,39 +1,33 @@
 {
-	"name": "GloboDialogo",
+	"name": "PuertaAFADU",
 	"plugin-id": "Sprite",
-	"sid": 697911801848719,
+	"sid": 807633601269649,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 147890210037984
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 576,
-						"height": 96,
+						"width": 128,
+						"height": 3,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9026944,
+						"imageSpriteId": 6686404,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 320672059699850,
-				"name": "GloboDialogo",
+				"sid": 959063280141839,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

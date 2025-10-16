@@ -1,7 +1,7 @@
 {
-	"name": "Titulo",
+	"name": "TXT_Jugar",
 	"plugin-id": "Text",
-	"sid": 856280333413986,
+	"sid": 672828031993593,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],

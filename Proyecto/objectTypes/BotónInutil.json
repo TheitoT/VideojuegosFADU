@@ -1,7 +1,7 @@
 {
-	"name": "Opciones",
+	"name": "BotónInutil",
 	"plugin-id": "Sprite",
-	"sid": 747151521768580,
+	"sid": 826244237845703,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,7 +20,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8813362,
+						"imageSpriteId": 4237485,
 						"collisionPoly": {
 							"points": [
 								0.1111111111111111,
@@ -48,7 +48,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 832960967960636,
+				"sid": 873513785891901,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

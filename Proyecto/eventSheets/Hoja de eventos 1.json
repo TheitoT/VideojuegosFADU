@@ -398,52 +398,158 @@
 			]
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Viajes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "EnriqueElCubo",
-					"sid": 347830140505470,
-					"parameters": {
-						"object": "RefPuerta"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 581354635709279,
+							"parameters": {
+								"object": "RefPuerta"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 569605239784075,
+							"parameters": {
+								"layout": "Desalvo"
+							}
+						}
+					],
+					"sid": 196477865203920
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 275507674895525,
+							"parameters": {
+								"object": "RefPuerta"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 731919969622536,
+							"parameters": {
+								"layout": "Desalvo"
+							}
+						}
+					],
+					"sid": 230635882537964
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 674706886194082,
+							"parameters": {
+								"object": "PuertaAlumnos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 962316062689035,
+							"parameters": {
+								"layout": "Alumnos"
+							}
+						}
+					],
+					"sid": 308954788814809
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 582619922268815,
+							"parameters": {
+								"object": "PuertaAlumnos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 258533782401218,
+							"parameters": {
+								"layout": "Alumnos"
+							}
+						}
+					],
+					"sid": 819135755333572
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 969500732941292,
+							"parameters": {
+								"object": "PuertaAFADU"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 668272398717111,
+							"parameters": {
+								"layout": "FADU"
+							}
+						}
+					],
+					"sid": 794789899965845
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 901824873689811,
+							"parameters": {
+								"object": "PuertaAFADU"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 354969414873731,
+							"parameters": {
+								"layout": "FADU"
+							}
+						}
+					],
+					"sid": 723463019156689
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 113278388558473,
-					"parameters": {
-						"layout": "Desalvo"
-					}
-				}
-			],
-			"sid": 535494319675504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "EnriquetaLaCuadrada",
-					"sid": 746975109065422,
-					"parameters": {
-						"object": "RefPuerta"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 754689774133870,
-					"parameters": {
-						"layout": "Desalvo"
-					}
-				}
-			],
-			"sid": 107771034915738
+			"sid": 132712455597529
 		},
 		{
 			"eventType": "group",
@@ -464,7 +570,7 @@
 					"actions": [
 						{
 							"id": "set-x",
-							"objectClass": "Sprite2",
+							"objectClass": "Press_E",
 							"sid": 115116251626831,
 							"parameters": {
 								"x": "EnriqueElCubo.X"
@@ -472,7 +578,7 @@
 						},
 						{
 							"id": "set-y",
-							"objectClass": "Sprite2",
+							"objectClass": "Press_E",
 							"sid": 178170899124119,
 							"parameters": {
 								"y": "EnriqueElCubo.Y-32"
@@ -551,7 +657,7 @@
 							"actions": [
 								{
 									"id": "set-visible",
-									"objectClass": "Sprite2",
+									"objectClass": "Press_E",
 									"sid": 671472786198380,
 									"parameters": {
 										"visibility": "visible"
@@ -572,7 +678,7 @@
 							"actions": [
 								{
 									"id": "set-visible",
-									"objectClass": "Sprite2",
+									"objectClass": "Press_E",
 									"sid": 131664456314800,
 									"parameters": {
 										"visibility": "invisible"
@@ -596,7 +702,7 @@
 						},
 						{
 							"id": "is-visible",
-							"objectClass": "Sprite2",
+							"objectClass": "Press_E",
 							"sid": 858287043157709
 						}
 					],
@@ -779,22 +885,37 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 143706860126566,
+							"sid": 248419833073030,
 							"parameters": {
 								"variable": "Estudiante1Dialogo",
 								"comparison": 4,
-								"value": "2"
+								"value": "3"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 592570414171449,
+							"id": "set-visible",
+							"objectClass": "Press_E",
+							"sid": 693927614102257,
 							"parameters": {
-								"variable": "Estudiante1Dialogo",
-								"value": "0"
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo",
+							"sid": 117584675721766,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "GloboDialogo",
+							"sid": 947987352505010,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -805,7 +926,7 @@
 					"conditions": [
 						{
 							"id": "is-visible",
-							"objectClass": "Sprite2",
+							"objectClass": "Press_E",
 							"sid": 244824015513276,
 							"isInverted": true
 						}

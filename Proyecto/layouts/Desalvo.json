@@ -85,7 +85,7 @@
 							"height": 22,
 							"max-width": 81,
 							"max-height": 33,
-							"data": "1,20x6,11,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,3x0,17x28,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,32x0,3,32x0,3,32x0,3,32x0,3,20x0,23,11x0,3,20x0,23,11x0,3,3x0,17x28,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,3,20x0,23,11x0,5,20x10,15,2024x0"
+							"data": "1,20x6,11,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,3x0,17x28,23,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,32x0,3,32x0,3,32x0,3,32x0,3,20x0,3,11x0,3,20x0,3,11x0,3,3x0,17x28,23,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,20x0,3,11x0,3,20x0,3,11x0,5,20x10,15,2024x0"
 						},
 						"tile-width": 32,
 						"tile-height": 32,
@@ -392,6 +392,43 @@
 						"y": 493,
 						"width": 32,
 						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PuertaAFADU",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"sid": 514709520794650,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 514709520794650,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 320,
+						"y": 704,
+						"width": 128,
+						"height": 3,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

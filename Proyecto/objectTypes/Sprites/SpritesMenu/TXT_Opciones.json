@@ -1,7 +1,7 @@
 {
-	"name": "Titulo",
+	"name": "TXT_Opciones",
 	"plugin-id": "Text",
-	"sid": 856280333413986,
+	"sid": 550041582677177,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
