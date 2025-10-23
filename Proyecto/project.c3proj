@@ -116,7 +116,9 @@
 	"objectTypes": {
 		"items": [
 			"Text",
-			"Text2"
+			"Text2",
+			"Sprite5",
+			"Estudiante2"
 		],
 		"subfolders": [
 			{
@@ -260,7 +262,24 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "dogica.otf",
+					"type": "application/font-sfnt",
+					"sid": 654131687195412,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dogicapixel.otf",
+					"type": "application/font-sfnt",
+					"sid": 655897418559135,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

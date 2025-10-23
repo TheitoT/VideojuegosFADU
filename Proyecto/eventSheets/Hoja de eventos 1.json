@@ -42,6 +42,46 @@
 			"sid": 560177768661590
 		},
 		{
+			"eventType": "variable",
+			"name": "Mision1_Empezar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 594123537594455
+		},
+		{
+			"eventType": "variable",
+			"name": "Mision1_Completada",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 463839669814128
+		},
+		{
+			"eventType": "variable",
+			"name": "Estudiante2Dialogo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 172829184011046
+		},
+		{
+			"eventType": "variable",
+			"name": "NPC2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 251908080033542
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -1133,6 +1173,528 @@
 				}
 			],
 			"sid": 294955911698957
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mision1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "Estudiante2",
+							"sid": 614673857443737,
+							"parameters": {
+								"which": "nearest",
+								"x": "EnriqueElCubo.X",
+								"y": "EnriqueElCubo.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 527817553493012,
+							"parameters": {
+								"variable": "NPC2",
+								"value": "Estudiante2.ID"
+							}
+						}
+					],
+					"sid": 999418361505178,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 732252837067890,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Estudiante2.X-32"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 192361589519861,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Estudiante2.X+32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 667800748803725,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Estudiante2.Y-32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 473475148817329,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Estudiante2.Y+32"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_E",
+									"sid": 310911939806874,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 955481397164569
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 688387763677140
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E",
+							"sid": 193814266734615,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 573960209685233
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 872380703088854,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Press_E",
+							"sid": 358400212646515
+						}
+					],
+					"actions": [],
+					"sid": 881113957972140,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 186067371371388,
+									"parameters": {
+										"variable": "NPC2",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 130792314671582,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Estudiante2.X+32"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 243192423586328,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Estudiante2.X-32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 664537690530814,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Estudiante2.Y+32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 515205397031815,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Estudiante2.Y-32"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 599914090121147,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 958068099930241,
+											"parameters": {
+												"variable": "Estudiante2Dialogo",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Dialogo",
+											"sid": 889599052038581,
+											"parameters": {
+												"text": "\"Voy a parecer loca hablando con animales pero...\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 197130298486104
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 738927773497417,
+											"parameters": {
+												"variable": "Estudiante2Dialogo",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Dialogo",
+											"sid": 971280537435328,
+											"parameters": {
+												"text": "\"Necesito entregar el trabajo en el piso de arriba\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 390422021159302
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 658263021043564,
+											"parameters": {
+												"variable": "Estudiante2Dialogo",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Dialogo",
+											"sid": 265528764828510,
+											"parameters": {
+												"text": "\"Y los acensores no están funcionando\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 921425304661631
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 487344712185302,
+											"parameters": {
+												"variable": "Estudiante2Dialogo",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "typewriter-text",
+											"objectClass": "Dialogo",
+											"sid": 422837167571249,
+											"parameters": {
+												"text": "\"¿Podrías entregar el trabajo por mí porfavor?\"",
+												"duration": "1"
+											}
+										}
+									],
+									"sid": 961346150468158
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 406932505417434,
+											"parameters": {
+												"variable": "Estudiante2Dialogo",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 914540026431808
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "GloboDialogo",
+											"sid": 941475422379311,
+											"parameters": {
+												"which": "nearest",
+												"x": "EnriqueElCubo.X",
+												"y": "EnriqueElCubo.Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "GloboDialogo",
+											"sid": 349505322758476,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 187051259372464
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Dialogo",
+											"sid": 834751668702308,
+											"parameters": {
+												"which": "nearest",
+												"x": "EnriqueElCubo.X",
+												"y": "EnriqueElCubo.Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Dialogo",
+											"sid": 131758796729178,
+											"parameters": {
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 506746605923681
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 803641551266049,
+							"parameters": {
+								"variable": "Estudiante1Dialogo",
+								"comparison": 4,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E",
+							"sid": 658294944599794,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo",
+							"sid": 289337825618683,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "GloboDialogo",
+							"sid": 232233899765458,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 963608313933442,
+							"parameters": {
+								"variable": "Mision1_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 420650084524373
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Press_E",
+							"sid": 592579562807816,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "GloboDialogo",
+							"sid": 987662128411735,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo",
+							"sid": 463541988025358,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 951990558386331
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 404120375057529,
+							"parameters": {
+								"variable": "Mision1_Empezar"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "EnriqueElCubo",
+							"sid": 908147928760132,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "Estudiante2.X+32"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "EnriqueElCubo",
+							"sid": 118273103893711,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "Estudiante2.X-32"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "EnriqueElCubo",
+							"sid": 660923096981983,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "Estudiante2.Y+32"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "EnriqueElCubo",
+							"sid": 455789937714296,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "Estudiante2.Y-32"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E",
+							"sid": 369544873635777,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo",
+							"sid": 688128275278386,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "GloboDialogo",
+							"sid": 407203855134954,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 308628794458748
+				}
+			],
+			"sid": 297668100770153
 		}
 	],
 	"sid": 281853114665437
