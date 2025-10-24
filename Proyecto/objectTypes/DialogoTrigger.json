@@ -1,10 +1,18 @@
 {
-	"name": "Desalvo_Zoom",
+	"name": "DialogoTrigger",
 	"plugin-id": "Sprite",
-	"sid": 288728063782541,
+	"sid": 557818508263865,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 751550489646470
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -12,33 +20,21 @@
 			{
 				"frames": [
 					{
-						"width": 640,
-						"height": 360,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9210575,
-						"collisionPoly": {
-							"points": [
-								0.3046875,
-								0.1527777777777778,
-								0.6953125,
-								0.1527777777777778,
-								0.6953125,
-								0.8472222222222222,
-								0.3046875,
-								0.8472222222222222
-							]
-						},
+						"imageSpriteId": 190917,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 141011130705261,
+				"sid": 642884862843085,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

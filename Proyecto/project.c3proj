@@ -115,7 +115,7 @@
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
 		"items": [
-			"Sprite5"
+			"DialogoTrigger"
 		],
 		"subfolders": [
 			{
@@ -128,7 +128,7 @@
 					"DesalvoChico",
 					"Sprite",
 					"Puertas",
-					"Desalvo_Zoom"
+					"MostradorZoom"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -148,8 +148,6 @@
 					"Press_E",
 					"PuertaAFADU",
 					"PuertaAlumnos",
-					"GloboDialogo2",
-					"Dialogo2",
 					"Exclamación",
 					"Viaje_Comedor",
 					"Press_E_Codigo"
@@ -200,7 +198,8 @@
 							"PressE",
 							"Sprite3",
 							"Sprite4",
-							"Sprite2"
+							"Sprite2",
+							"Lock"
 						],
 						"subfolders": [],
 						"name": "Objetos"
@@ -216,7 +215,8 @@
 						"items": [
 							"Codigo_Fondo",
 							"Txt_Codigo",
-							"TxT_Entrada"
+							"TxT_Entrada",
+							"Txt_CerrarCodigo"
 						],
 						"subfolders": [
 							{
@@ -265,7 +265,6 @@
 			"MainMenu",
 			"Alumnos",
 			"Desalvo",
-			"Desalvo Chico",
 			"Opciones",
 			"Comedor"
 		],
@@ -274,7 +273,8 @@
 	"eventSheets": {
 		"items": [
 			"Hoja de eventos 1",
-			"MainMenuSheet"
+			"MainMenuSheet",
+			"Dialogos"
 		],
 		"subfolders": []
 	},

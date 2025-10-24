@@ -1,0 +1,155 @@
+{
+	"name": "Dialogos",
+	"events": [
+		{
+			"functionName": "Dialogo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Texto",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 256224325088808
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Dialogo",
+					"sid": 127760044741819,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GloboDialogo",
+					"sid": 288671872957511,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GloboDialogo",
+					"sid": 602984968389240,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Dialogo",
+					"sid": 294684368005031,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "Dialogo",
+					"sid": 710290743364263,
+					"parameters": {
+						"text": "Texto",
+						"duration": "1"
+					}
+				}
+			],
+			"sid": 401027869535616
+		},
+		{
+			"functionName": "DestruirDialogo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Dialogo",
+					"sid": 641792485021025,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GloboDialogo",
+					"sid": 278476455873191,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 595873901668296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 646588050936429,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Dialogo",
+					"sid": 483868679167276
+				}
+			],
+			"actions": [
+				{
+					"id": "typewriter-finish",
+					"objectClass": "Dialogo",
+					"sid": 344992111075583
+				}
+			],
+			"sid": 203699836752381
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 709417228135055,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Dialogo",
+					"sid": 354356640396181,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 181159346577737,
+					"parameters": {
+						"tag": "\"Siguiente\""
+					}
+				}
+			],
+			"sid": 371566314370690
+		}
+	],
+	"sid": 366304931335047
+}

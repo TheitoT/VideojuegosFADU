@@ -2,6 +2,10 @@
 	"name": "Hoja de eventos 1",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Dialogos"
+		},
+		{
 			"eventType": "variable",
 			"name": "UID_objeto_agarrado",
 			"type": "number",
@@ -10,30 +14,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 432012875850657
-		},
-		{
-			"eventType": "comment",
-			"text": "//// Dialogos NPC1 ////"
-		},
-		{
-			"eventType": "variable",
-			"name": "NPC",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 722829241782005
-		},
-		{
-			"eventType": "variable",
-			"name": "Estudiante1Dialogo",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 126346601230661
 		},
 		{
 			"eventType": "comment",
@@ -74,28 +54,24 @@
 			"sid": 463839669814128
 		},
 		{
-			"eventType": "comment",
-			"text": "//// Dialogos NPC2 ////"
-		},
-		{
 			"eventType": "variable",
-			"name": "Estudiante2Dialogo",
-			"type": "number",
-			"initialValue": "0",
+			"name": "Mision1_Comida_Empezar",
+			"type": "boolean",
+			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 172829184011046
+			"sid": 262816689829843
 		},
 		{
 			"eventType": "variable",
-			"name": "NPC2",
-			"type": "number",
-			"initialValue": "0",
+			"name": "Mision1_Comida_Completada",
+			"type": "boolean",
+			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 251908080033542
+			"sid": 383474440830193
 		},
 		{
 			"eventType": "comment",
@@ -710,16 +686,108 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 111352023141459,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 549556055905679,
+							"parameters": {
+								"object": "DialogoTrigger"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger",
+							"sid": 911466967700321,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Dialogo",
+							"sid": 805090649241587,
+							"parameters": [
+								"\"Hola! Prueba 1\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 110511169350062,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 825334868220609,
+							"parameters": [
+								"\"Porfavor necesito que alguien me de una piña\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 798174765691603,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 517311516782112,
+							"parameters": [
+								"\"O me mate directamente pero algo, no doy más\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 179844742743290,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 436743174576542
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger",
+							"sid": 975609692558552,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 762143665529919
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 205699634448367
+							"sid": 886838302407167
 						}
 					],
 					"actions": [
 						{
 							"id": "set-x",
 							"objectClass": "Press_E",
-							"sid": 115116251626831,
+							"sid": 227571535129782,
 							"parameters": {
 								"x": "EnriqueElCubo.X"
 							}
@@ -727,317 +795,33 @@
 						{
 							"id": "set-y",
 							"objectClass": "Press_E",
-							"sid": 178170899124119,
+							"sid": 377769929122063,
 							"parameters": {
 								"y": "EnriqueElCubo.Y-32"
 							}
 						}
 					],
-					"sid": 240029221271846
+					"sid": 653620639205748
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "Estudiante1",
-							"sid": 227655014235490,
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 427596898096862,
 							"parameters": {
-								"which": "nearest",
-								"x": "EnriqueElCubo.X",
-								"y": "EnriqueElCubo.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 677417413884493,
-							"parameters": {
-								"variable": "NPC",
-								"value": "Estudiante1.ID"
-							}
-						}
-					],
-					"sid": 319668947546509,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 391332300445208,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "Estudiante1.X-32"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 365806319837993,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "Estudiante1.X+32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 160574116668986,
-									"parameters": {
-										"comparison": 4,
-										"y-co-ordinate": "Estudiante1.Y-32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 499181376269767,
-									"parameters": {
-										"comparison": 2,
-										"y-co-ordinate": "Estudiante1.Y+32"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Press_E",
-									"sid": 671472786198380,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 214597595609920
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 920892483166520
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Press_E",
-									"sid": 131664456314800,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 542373941404157
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Teclado",
-							"sid": 467118297802100,
-							"parameters": {
-								"key": 69
+								"object": "DialogoTrigger"
 							}
 						},
 						{
-							"id": "is-visible",
-							"objectClass": "Press_E",
-							"sid": 858287043157709
-						}
-					],
-					"actions": [],
-					"sid": 442032942309811,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 916389394858377,
-									"parameters": {
-										"variable": "NPC",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 975167512569193,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 395949039625833,
-											"parameters": {
-												"variable": "Estudiante1Dialogo",
-												"comparison": 0,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 685611709639033,
-											"parameters": {
-												"text": "\"Hola?\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 128003406283839
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 179282290525785,
-											"parameters": {
-												"variable": "Estudiante1Dialogo",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 913913983739796,
-											"parameters": {
-												"text": "\"Estuve comprando en Desalvo y no puedo encontrar mi escuadra\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 379283485364962
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 442966576292143,
-											"parameters": {
-												"variable": "Estudiante1Dialogo",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 789066663657190,
-											"parameters": {
-												"text": "\"Podrías ayudarme a recuperarla? No quiero hacer la fila nuevamente\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 236271904856100
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 238389749986713,
-									"parameters": {
-										"variable": "Estudiante1Dialogo",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 378137872804792
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "GloboDialogo",
-									"sid": 934439605865112,
-									"parameters": {
-										"which": "nearest",
-										"x": "EnriqueElCubo.X",
-										"y": "EnriqueElCubo.Y"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "GloboDialogo",
-									"sid": 553242726221503,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 916972902816607
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "Dialogo",
-									"sid": 153043000005927,
-									"parameters": {
-										"which": "nearest",
-										"x": "EnriqueElCubo.X",
-										"y": "EnriqueElCubo.Y"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Dialogo",
-									"sid": 312234794176830,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 313847316648811
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 248419833073030,
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger",
+							"sid": 827733378431756,
 							"parameters": {
-								"variable": "Estudiante1Dialogo",
-								"comparison": 4,
-								"value": "3"
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
 							}
 						}
 					],
@@ -1045,71 +829,37 @@
 						{
 							"id": "set-visible",
 							"objectClass": "Press_E",
-							"sid": 693927614102257,
+							"sid": 712680867699879,
 							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 117584675721766,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 947987352505010,
-							"parameters": {
-								"visibility": "invisible"
+								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 501331067453493
+					"sid": 592517775443001
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-visible",
-							"objectClass": "Press_E",
-							"sid": 244824015513276,
-							"isInverted": true
+							"id": "else",
+							"objectClass": "System",
+							"sid": 866392196990052
 						}
 					],
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 501663843908290,
+							"objectClass": "Press_E",
+							"sid": 973300952517140,
 							"parameters": {
 								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 841769112037572,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 374700800842172,
-							"parameters": {
-								"variable": "Estudiante1Dialogo",
-								"value": "0"
 							}
 						}
 					],
-					"sid": 932468219973969
+					"sid": 491041662037856
 				}
 			],
-			"sid": 650045581112483
+			"sid": 936253769514568
 		},
 		{
 			"eventType": "group",
@@ -1303,522 +1053,6 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "/////// DIALOGO NPC + MISION /////////"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "Estudiante2",
-							"sid": 614673857443737,
-							"parameters": {
-								"which": "nearest",
-								"x": "EnriqueElCubo.X",
-								"y": "EnriqueElCubo.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 527817553493012,
-							"parameters": {
-								"variable": "NPC2",
-								"value": "Estudiante2.ID"
-							}
-						}
-					],
-					"sid": 999418361505178,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 732252837067890,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "Estudiante2.X-32"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 192361589519861,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "Estudiante2.X+32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 667800748803725,
-									"parameters": {
-										"comparison": 4,
-										"y-co-ordinate": "Estudiante2.Y-32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 473475148817329,
-									"parameters": {
-										"comparison": 2,
-										"y-co-ordinate": "Estudiante2.Y+32"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Press_E",
-									"sid": 310911939806874,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 955481397164569
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 688387763677140
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Press_E",
-							"sid": 193814266734615,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 573960209685233
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Teclado",
-							"sid": 872380703088854,
-							"parameters": {
-								"key": 69
-							}
-						},
-						{
-							"id": "is-visible",
-							"objectClass": "Press_E",
-							"sid": 358400212646515
-						}
-					],
-					"actions": [],
-					"sid": 881113957972140,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 274013800139767,
-									"parameters": {
-										"variable": "NPC2",
-										"comparison": 0,
-										"value": "1"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 130792314671582,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "Estudiante2.X+32"
-									}
-								},
-								{
-									"id": "compare-x",
-									"objectClass": "EnriqueElCubo",
-									"sid": 243192423586328,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "Estudiante2.X-32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 664537690530814,
-									"parameters": {
-										"comparison": 2,
-										"y-co-ordinate": "Estudiante2.Y+32"
-									}
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "EnriqueElCubo",
-									"sid": 515205397031815,
-									"parameters": {
-										"comparison": 4,
-										"y-co-ordinate": "Estudiante2.Y-32"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 599914090121147,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 958068099930241,
-											"parameters": {
-												"variable": "Estudiante2Dialogo",
-												"comparison": 0,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo2",
-											"sid": 425407426644347,
-											"parameters": {
-												"text": "\"Voy a parecer loca hablando con animales pero...\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 197130298486104
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 738927773497417,
-											"parameters": {
-												"variable": "Estudiante2Dialogo",
-												"comparison": 0,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo2",
-											"sid": 913144822487769,
-											"parameters": {
-												"text": "\"Necesito entregar el trabajo en el piso de arriba\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 390422021159302
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 658263021043564,
-											"parameters": {
-												"variable": "Estudiante2Dialogo",
-												"comparison": 0,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo2",
-											"sid": 755106921398860,
-											"parameters": {
-												"text": "\"Y los acensores no están funcionando, son mi única opción\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 921425304661631
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 487344712185302,
-											"parameters": {
-												"variable": "Estudiante2Dialogo",
-												"comparison": 0,
-												"value": "3"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "typewriter-text",
-											"objectClass": "Dialogo2",
-											"sid": 669132170646619,
-											"parameters": {
-												"text": "\"¿Podrías entregar el trabajo por mí porfavor?\"",
-												"duration": "1"
-											}
-										}
-									],
-									"sid": 961346150468158
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 996397490504842,
-									"parameters": {
-										"variable": "Estudiante2Dialogo",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 576253115876741
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "GloboDialogo2",
-									"sid": 719662072342541,
-									"parameters": {
-										"which": "nearest",
-										"x": "EnriqueElCubo.X",
-										"y": "EnriqueElCubo.Y"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "GloboDialogo2",
-									"sid": 827362343179933,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 415754913716576
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "Dialogo2",
-									"sid": 850555310267495,
-									"parameters": {
-										"which": "nearest",
-										"x": "EnriqueElCubo.X",
-										"y": "EnriqueElCubo.Y"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-visible",
-									"objectClass": "Dialogo2",
-									"sid": 769546839538095,
-									"parameters": {
-										"visibility": "visible"
-									}
-								}
-							],
-							"sid": 943433091530399
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 583376049487570,
-							"parameters": {
-								"variable": "Estudiante2Dialogo",
-								"comparison": 4,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Press_E",
-							"sid": 658294944599794,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo2",
-							"sid": 413510011588615,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo2",
-							"sid": 761212950196718,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 273131950454534,
-							"parameters": {
-								"variable": "Mision1_Empezar",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 420650084524373
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-visible",
-							"objectClass": "Press_E",
-							"sid": 592579562807816,
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo2",
-							"sid": 847826267586195,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo2",
-							"sid": 541168861649567,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 951990558386331
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 925279270524569,
-							"parameters": {
-								"variable": "Mision1_Empezar"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "EnriqueElCubo",
-							"sid": 982360063329001,
-							"parameters": {
-								"comparison": 2,
-								"x-co-ordinate": "Estudiante2.X+32"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "EnriqueElCubo",
-							"sid": 146020368000852,
-							"parameters": {
-								"comparison": 4,
-								"x-co-ordinate": "Estudiante2.X-32"
-							}
-						},
-						{
-							"id": "compare-y",
-							"objectClass": "EnriqueElCubo",
-							"sid": 842740191448436,
-							"parameters": {
-								"comparison": 2,
-								"y-co-ordinate": "Estudiante2.Y+32"
-							}
-						},
-						{
-							"id": "compare-y",
-							"objectClass": "EnriqueElCubo",
-							"sid": 880492489373103,
-							"parameters": {
-								"comparison": 4,
-								"y-co-ordinate": "Estudiante2.Y-32"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo2",
-							"sid": 601043223339382,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo2",
-							"sid": 655020060470838,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Press_E",
-							"sid": 147839848777106,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 481368094698885
-				},
-				{
-					"eventType": "comment",
 					"text": "/////COSO DEL CODIGO/////"
 				},
 				{
@@ -1885,7 +1119,7 @@
 					"conditions": [
 						{
 							"id": "pick-nearestfurthest",
-							"objectClass": "Sprite5",
+							"objectClass": "Lock",
 							"sid": 262794036185248,
 							"parameters": {
 								"which": "nearest",
@@ -1913,37 +1147,37 @@
 								{
 									"id": "compare-x",
 									"objectClass": "EnriqueElCubo",
-									"sid": 729584467733946,
+									"sid": 515808630456426,
 									"parameters": {
 										"comparison": 2,
-										"x-co-ordinate": "Sprite5.X+32"
+										"x-co-ordinate": "Lock.X+34"
 									}
 								},
 								{
 									"id": "compare-x",
 									"objectClass": "EnriqueElCubo",
-									"sid": 789949705355483,
+									"sid": 678613917425875,
 									"parameters": {
 										"comparison": 4,
-										"x-co-ordinate": "Sprite5.X-32"
+										"x-co-ordinate": "Lock.X-34"
 									}
 								},
 								{
 									"id": "compare-y",
 									"objectClass": "EnriqueElCubo",
-									"sid": 986193734242673,
+									"sid": 702723891463543,
 									"parameters": {
 										"comparison": 2,
-										"y-co-ordinate": "Sprite5.Y+32"
+										"y-co-ordinate": "Lock.Y+34"
 									}
 								},
 								{
 									"id": "compare-y",
 									"objectClass": "EnriqueElCubo",
-									"sid": 469309112423909,
+									"sid": 322066028989898,
 									"parameters": {
 										"comparison": 4,
-										"y-co-ordinate": "Sprite5.Y-32"
+										"y-co-ordinate": "Lock.Y-34"
 									}
 								}
 							],
@@ -1958,29 +1192,29 @@
 								}
 							],
 							"sid": 876639805875836
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 392710606967276
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_E_Codigo",
+									"sid": 209055724648645,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 396086993147196
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 247699592168300
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Press_E_Codigo",
-							"sid": 181248891710144,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 652482314103402
 				},
 				{
 					"eventType": "block",
@@ -2131,7 +1365,7 @@
 										},
 										{
 											"id": "set-enabled",
-											"objectClass": "Sprite5",
+											"objectClass": "Lock",
 											"sid": 836905193906889,
 											"behaviorType": "Solid",
 											"parameters": {
@@ -2217,6 +1451,42 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 714820915927619,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Txt_CerrarCodigo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 763649265695165,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 757473127770617,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 831376157572128
 				}
 			],
 			"sid": 297668100770153
