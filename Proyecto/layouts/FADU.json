@@ -1319,6 +1319,80 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Viaje_Comedor",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 138,
+					"sid": 688045580920800,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 688045580920800,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 384,
+						"width": 2.6894705114415274,
+						"height": 288,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Viaje_Comedor",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 139,
+					"sid": 896087379581803,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 896087379581803,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 960,
+						"width": 2.6894705114415274,
+						"height": 288,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 905647021945085,
@@ -1996,7 +2070,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "NoBorrar",
 					"properties": {
 						"text": "MENU",
 						"enable-bbcode": true,
@@ -2049,7 +2123,7 @@
 					}
 				},
 				{
-					"type": "Text2",
+					"type": "NoBorrar2",
 					"properties": {
 						"text": "PAUSA",
 						"enable-bbcode": true,

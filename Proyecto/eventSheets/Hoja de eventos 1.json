@@ -12,6 +12,10 @@
 			"sid": 432012875850657
 		},
 		{
+			"eventType": "comment",
+			"text": "//// Dialogos NPC1 ////"
+		},
+		{
 			"eventType": "variable",
 			"name": "NPC",
 			"type": "number",
@@ -32,6 +36,10 @@
 			"sid": 126346601230661
 		},
 		{
+			"eventType": "comment",
+			"text": "//// Variable Pausa ////"
+		},
+		{
 			"eventType": "variable",
 			"name": "ESC_Pausa",
 			"type": "boolean",
@@ -40,6 +48,10 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 560177768661590
+		},
+		{
+			"eventType": "comment",
+			"text": "//// Variables Misión1 ////"
 		},
 		{
 			"eventType": "variable",
@@ -62,6 +74,10 @@
 			"sid": 463839669814128
 		},
 		{
+			"eventType": "comment",
+			"text": "//// Dialogos NPC2 ////"
+		},
+		{
 			"eventType": "variable",
 			"name": "Estudiante2Dialogo",
 			"type": "number",
@@ -80,6 +96,40 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 251908080033542
+		},
+		{
+			"eventType": "comment",
+			"text": "//// Variables del sistema de Codigo ////"
+		},
+		{
+			"eventType": "variable",
+			"name": "CodigoActual",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 548822843538042
+		},
+		{
+			"eventType": "variable",
+			"name": "CodigoCorrecto",
+			"type": "string",
+			"initialValue": "4592",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 109754996233673
+		},
+		{
+			"eventType": "variable",
+			"name": "CercaLock",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 464901093936084
 		},
 		{
 			"eventType": "group",
@@ -597,6 +647,54 @@
 						}
 					],
 					"sid": 723463019156689
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 698329890755140,
+							"parameters": {
+								"object": "Viaje_Comedor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 965845339496051,
+							"parameters": {
+								"layout": "Comedor"
+							}
+						}
+					],
+					"sid": 132876784043431
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 315485761249144,
+							"parameters": {
+								"object": "Viaje_Comedor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 386371538836318,
+							"parameters": {
+								"layout": "Comedor"
+							}
+						}
+					],
+					"sid": 653179781777038
 				}
 			],
 			"sid": 132712455597529
@@ -1073,6 +1171,15 @@
 							"parameters": {
 								"time-scale": "0"
 							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 626612789191602,
+							"parameters": {
+								"layer": "\"HUD\"",
+								"interactive": true
+							}
 						}
 					],
 					"sid": 301156708987383
@@ -1106,6 +1213,15 @@
 							"sid": 559806186962562,
 							"parameters": {
 								"time-scale": "1.0"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 622953741588278,
+							"parameters": {
+								"layer": "\"HUD\"",
+								"interactive": false
 							}
 						}
 					],
@@ -1185,6 +1301,10 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "/////// DIALOGO NPC + MISION /////////"
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -1696,6 +1816,407 @@
 						}
 					],
 					"sid": 481368094698885
+				},
+				{
+					"eventType": "comment",
+					"text": "/////COSO DEL CODIGO/////"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 949231231518608
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_E_Codigo",
+							"sid": 609095702633776,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E_Codigo",
+							"sid": 239536250065476,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						}
+					],
+					"sid": 612385283620066
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 573328670114513
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 283549501501228,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E_Codigo",
+							"sid": 979220467755241,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 548216700506168
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "Sprite5",
+							"sid": 262794036185248,
+							"parameters": {
+								"which": "nearest",
+								"x": "EnriqueElCubo.X",
+								"y": "EnriqueElCubo.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 801899929121975,
+							"parameters": {
+								"variable": "CercaLock",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 234312479069578,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 729584467733946,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Sprite5.X+32"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "EnriqueElCubo",
+									"sid": 789949705355483,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Sprite5.X-32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 986193734242673,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Sprite5.Y+32"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriqueElCubo",
+									"sid": 469309112423909,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Sprite5.Y-32"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_E_Codigo",
+									"sid": 780904696007199,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 876639805875836
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 247699592168300
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E_Codigo",
+							"sid": 181248891710144,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 652482314103402
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 886158013236202,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Press_E_Codigo",
+							"sid": 454947753261362
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 804267711749196,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 368739197792019,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"interactive": true
+							}
+						}
+					],
+					"sid": 383707502859438
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 309613204413862,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Txt_Codigo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 509391655529676,
+							"parameters": {
+								"variable": "CodigoActual",
+								"value": "CodigoActual&str(Txt_Codigo.NCodigo)"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "TxT_Entrada",
+							"sid": 302122638526644,
+							"parameters": {
+								"text": "CodigoActual",
+								"duration": "0"
+							}
+						}
+					],
+					"sid": 260044166003359,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 872242424712776,
+									"parameters": {
+										"first-value": "len(CodigoActual)",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 811690446991889,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 575903732055928,
+											"parameters": {
+												"first-value": "(CodigoActual)",
+												"comparison": 0,
+												"second-value": "(CodigoCorrecto)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 581868307300261,
+											"parameters": {
+												"text": "\"Correcto\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 633231396370996,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 643722734076310,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 734942750119248,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"interactive": false
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Press_E_Codigo",
+											"sid": 904464048564244
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Sprite5",
+											"sid": 836905193906889,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 608993240830916
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 616017910218586
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 764236213203594,
+											"parameters": {
+												"text": "\"ERROR\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 600912258936716,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 512484851794457,
+											"parameters": {
+												"variable": "CodigoActual",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 316529329013133,
+											"parameters": {
+												"text": "\"----\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 334844879383170,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 518377018609944,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"interactive": false
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 910395825500532,
+											"parameters": {
+												"layout": "FADU"
+											}
+										}
+									],
+									"sid": 937049803461974
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 297668100770153

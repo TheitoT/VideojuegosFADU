@@ -1,7 +1,7 @@
 {
-	"name": "Codigo_Fondo",
+	"name": "BTN_Enter",
 	"plugin-id": "Sprite",
-	"sid": 334821220449230,
+	"sid": 828275691938728,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,41 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9721393,
+						"imageSpriteId": 6978937,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0,
+								0.9375,
+								0,
+								1,
+								0.0625,
+								1,
+								0.9375,
+								0.9375,
+								1,
+								0.0625,
+								1,
+								0,
+								0.9375,
+								0,
+								0.0625
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 916084267948435,
+				"sid": 838928899138344,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

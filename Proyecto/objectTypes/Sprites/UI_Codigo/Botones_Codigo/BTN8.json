@@ -1,7 +1,7 @@
 {
-	"name": "Botones_Codigo",
+	"name": "BTN8",
 	"plugin-id": "Sprite",
-	"sid": 340934709319331,
+	"sid": 673381284812832,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,33 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1220458,
+						"imageSpriteId": 6723860,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0,
+								0.9375,
+								0,
+								1,
+								0.0625,
+								1,
+								0.9375,
+								0.9375,
+								1,
+								0.0625,
+								1,
+								0,
+								0.9375,
+								0,
+								0.0625
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 603100286063465,
+				"sid": 681233165867558,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

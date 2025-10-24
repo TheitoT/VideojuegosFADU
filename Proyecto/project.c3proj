@@ -115,8 +115,7 @@
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
 		"items": [
-			"Text",
-			"Text2"
+			"Sprite5"
 		],
 		"subfolders": [
 			{
@@ -128,7 +127,8 @@
 					"desalvo",
 					"DesalvoChico",
 					"Sprite",
-					"Puertas"
+					"Puertas",
+					"Desalvo_Zoom"
 				],
 				"subfolders": [],
 				"name": "Fondo"
@@ -150,7 +150,9 @@
 					"PuertaAlumnos",
 					"GloboDialogo2",
 					"Dialogo2",
-					"Exclamación"
+					"Exclamación",
+					"Viaje_Comedor",
+					"Press_E_Codigo"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -209,19 +211,44 @@
 						],
 						"subfolders": [],
 						"name": "HUD"
+					},
+					{
+						"items": [
+							"Codigo_Fondo",
+							"Txt_Codigo",
+							"TxT_Entrada"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"BTN1",
+									"BTN2",
+									"BTN3",
+									"BTN4",
+									"BTN5",
+									"BTN6",
+									"BTN7",
+									"BTN8",
+									"BTN9",
+									"BTN_Borrar",
+									"BTN_Enter"
+								],
+								"subfolders": [],
+								"name": "Botones_Codigo"
+							}
+						],
+						"name": "UI_Codigo"
 					}
 				],
 				"name": "Sprites"
 			},
 			{
 				"items": [
-					"Codigo_Fondo",
-					"Botones_Codigo",
-					"Txt_Codigo",
-					"TxT_EnterCodigo"
+					"NoBorrar",
+					"NoBorrar2"
 				],
 				"subfolders": [],
-				"name": "UI_Codigo"
+				"name": "NoBorrar"
 			}
 		]
 	},

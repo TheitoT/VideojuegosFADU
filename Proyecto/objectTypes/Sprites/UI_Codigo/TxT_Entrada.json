@@ -1,0 +1,18 @@
+{
+	"name": "TxT_Entrada",
+	"plugin-id": "Text",
+	"sid": 254049250922799,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Escrito1",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 932095761553115
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
