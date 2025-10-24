@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44902,
+	"savedWithRelease": 45800,
 	"name": "AnimalitosDeLaReserva",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -116,9 +116,7 @@
 	"objectTypes": {
 		"items": [
 			"Text",
-			"Text2",
-			"Sprite5",
-			"Estudiante2"
+			"Text2"
 		],
 		"subfolders": [
 			{
@@ -149,7 +147,10 @@
 					"Dialogo",
 					"Press_E",
 					"PuertaAFADU",
-					"PuertaAlumnos"
+					"PuertaAlumnos",
+					"GloboDialogo2",
+					"Dialogo2",
+					"Exclamación"
 				],
 				"subfolders": [],
 				"name": "Herramientas"
@@ -162,7 +163,11 @@
 							"EnriqueElCubo",
 							"EnriquetaLaCuadrada",
 							"PoliciaElCuadrado",
-							"Estudiante1"
+							"Estudiante1",
+							"Estudiante2",
+							"Guardia1",
+							"Guardia2",
+							"Guardia3"
 						],
 						"subfolders": [],
 						"name": "Personajes"
@@ -207,6 +212,16 @@
 					}
 				],
 				"name": "Sprites"
+			},
+			{
+				"items": [
+					"Codigo_Fondo",
+					"Botones_Codigo",
+					"Txt_Codigo",
+					"TxT_EnterCodigo"
+				],
+				"subfolders": [],
+				"name": "UI_Codigo"
 			}
 		]
 	},
@@ -224,7 +239,8 @@
 			"Alumnos",
 			"Desalvo",
 			"Desalvo Chico",
-			"Opciones"
+			"Opciones",
+			"Comedor"
 		],
 		"subfolders": []
 	},
@@ -401,8 +417,8 @@
 		],
 		"orientations": "any",
 		"webgpu": "auto",
+		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
-		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"sampling": "nearest",
 		"downscaling": "medium",
@@ -413,10 +429,11 @@
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,
+		"uidAllocationMode": "increment",
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"exportFileStructure": "folders",
-		"uidAllocationMode": "increment"
+		"scriptsType": "module"
 	},
 	"viewportWidth": 640,
 	"viewportHeight": 360,

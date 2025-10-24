@@ -1175,6 +1175,10 @@
 			"sid": 294955911698957
 		},
 		{
+			"eventType": "comment",
+			"text": "Mision 1 = Mision Sillas de Ruedas, Guardias Hambrientos y Codigo Comedor"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Mision1",
@@ -1309,11 +1313,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 186067371371388,
+									"sid": 274013800139767,
 									"parameters": {
 										"variable": "NPC2",
 										"comparison": 0,
-										"value": "2"
+										"value": "1"
 									}
 								},
 								{
@@ -1373,8 +1377,8 @@
 									"actions": [
 										{
 											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 889599052038581,
+											"objectClass": "Dialogo2",
+											"sid": 425407426644347,
 											"parameters": {
 												"text": "\"Voy a parecer loca hablando con animales pero...\"",
 												"duration": "1"
@@ -1400,8 +1404,8 @@
 									"actions": [
 										{
 											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 971280537435328,
+											"objectClass": "Dialogo2",
+											"sid": 913144822487769,
 											"parameters": {
 												"text": "\"Necesito entregar el trabajo en el piso de arriba\"",
 												"duration": "1"
@@ -1427,10 +1431,10 @@
 									"actions": [
 										{
 											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 265528764828510,
+											"objectClass": "Dialogo2",
+											"sid": 755106921398860,
 											"parameters": {
-												"text": "\"Y los acensores no están funcionando\"",
+												"text": "\"Y los acensores no están funcionando, son mi única opción\"",
 												"duration": "1"
 											}
 										}
@@ -1454,8 +1458,8 @@
 									"actions": [
 										{
 											"id": "typewriter-text",
-											"objectClass": "Dialogo",
-											"sid": 422837167571249,
+											"objectClass": "Dialogo2",
+											"sid": 669132170646619,
 											"parameters": {
 												"text": "\"¿Podrías entregar el trabajo por mí porfavor?\"",
 												"duration": "1"
@@ -1463,76 +1467,76 @@
 										}
 									],
 									"sid": 961346150468158
-								},
-								{
-									"eventType": "block",
-									"conditions": [],
-									"actions": [
-										{
-											"id": "add-to-eventvar",
-											"objectClass": "System",
-											"sid": 406932505417434,
-											"parameters": {
-												"variable": "Estudiante2Dialogo",
-												"value": "1"
-											}
-										}
-									],
-									"sid": 914540026431808
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "GloboDialogo",
-											"sid": 941475422379311,
-											"parameters": {
-												"which": "nearest",
-												"x": "EnriqueElCubo.X",
-												"y": "EnriqueElCubo.Y"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "GloboDialogo",
-											"sid": 349505322758476,
-											"parameters": {
-												"visibility": "visible"
-											}
-										}
-									],
-									"sid": 187051259372464
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "Dialogo",
-											"sid": 834751668702308,
-											"parameters": {
-												"which": "nearest",
-												"x": "EnriqueElCubo.X",
-												"y": "EnriqueElCubo.Y"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-visible",
-											"objectClass": "Dialogo",
-											"sid": 131758796729178,
-											"parameters": {
-												"visibility": "visible"
-											}
-										}
-									],
-									"sid": 506746605923681
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 996397490504842,
+									"parameters": {
+										"variable": "Estudiante2Dialogo",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 576253115876741
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "GloboDialogo2",
+									"sid": 719662072342541,
+									"parameters": {
+										"which": "nearest",
+										"x": "EnriqueElCubo.X",
+										"y": "EnriqueElCubo.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "GloboDialogo2",
+									"sid": 827362343179933,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 415754913716576
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "Dialogo2",
+									"sid": 850555310267495,
+									"parameters": {
+										"which": "nearest",
+										"x": "EnriqueElCubo.X",
+										"y": "EnriqueElCubo.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Dialogo2",
+									"sid": 769546839538095,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 943433091530399
 						}
 					]
 				},
@@ -1542,9 +1546,9 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 803641551266049,
+							"sid": 583376049487570,
 							"parameters": {
-								"variable": "Estudiante1Dialogo",
+								"variable": "Estudiante2Dialogo",
 								"comparison": 4,
 								"value": "4"
 							}
@@ -1561,16 +1565,16 @@
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 289337825618683,
+							"objectClass": "Dialogo2",
+							"sid": 413510011588615,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 232233899765458,
+							"objectClass": "GloboDialogo2",
+							"sid": 761212950196718,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -1578,7 +1582,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 963608313933442,
+							"sid": 273131950454534,
 							"parameters": {
 								"variable": "Mision1_Empezar",
 								"value": "true"
@@ -1600,16 +1604,16 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 987662128411735,
+							"objectClass": "GloboDialogo2",
+							"sid": 847826267586195,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						},
 						{
 							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 463541988025358,
+							"objectClass": "Dialogo2",
+							"sid": 541168861649567,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -1623,7 +1627,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 404120375057529,
+							"sid": 925279270524569,
 							"parameters": {
 								"variable": "Mision1_Empezar"
 							}
@@ -1631,7 +1635,7 @@
 						{
 							"id": "compare-x",
 							"objectClass": "EnriqueElCubo",
-							"sid": 908147928760132,
+							"sid": 982360063329001,
 							"parameters": {
 								"comparison": 2,
 								"x-co-ordinate": "Estudiante2.X+32"
@@ -1640,7 +1644,7 @@
 						{
 							"id": "compare-x",
 							"objectClass": "EnriqueElCubo",
-							"sid": 118273103893711,
+							"sid": 146020368000852,
 							"parameters": {
 								"comparison": 4,
 								"x-co-ordinate": "Estudiante2.X-32"
@@ -1649,7 +1653,7 @@
 						{
 							"id": "compare-y",
 							"objectClass": "EnriqueElCubo",
-							"sid": 660923096981983,
+							"sid": 842740191448436,
 							"parameters": {
 								"comparison": 2,
 								"y-co-ordinate": "Estudiante2.Y+32"
@@ -1658,7 +1662,7 @@
 						{
 							"id": "compare-y",
 							"objectClass": "EnriqueElCubo",
-							"sid": 455789937714296,
+							"sid": 880492489373103,
 							"parameters": {
 								"comparison": 4,
 								"y-co-ordinate": "Estudiante2.Y-32"
@@ -1668,33 +1672,46 @@
 					"actions": [
 						{
 							"id": "set-visible",
+							"objectClass": "GloboDialogo2",
+							"sid": 601043223339382,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dialogo2",
+							"sid": 655020060470838,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "Press_E",
-							"sid": 369544873635777,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Dialogo",
-							"sid": 688128275278386,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "GloboDialogo",
-							"sid": 407203855134954,
+							"sid": 147839848777106,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 308628794458748
+					"sid": 481368094698885
 				}
 			],
 			"sid": 297668100770153
+		},
+		{
+			"eventType": "comment",
+			"text": "Mision 2 ="
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mision2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 695037049211376
 		}
 	],
 	"sid": 281853114665437

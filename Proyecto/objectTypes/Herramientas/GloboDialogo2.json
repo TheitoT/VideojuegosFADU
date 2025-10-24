@@ -1,33 +1,39 @@
 {
-	"name": "Sprite5",
+	"name": "GloboDialogo2",
 	"plugin-id": "Sprite",
-	"sid": 381003172364665,
+	"sid": 614942816492625,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 175695040056202
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 32,
+						"width": 576,
+						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1708705,
+						"imageSpriteId": 4609965,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 609438240364304,
-				"name": "Animation 1",
+				"sid": 666198273315918,
+				"name": "GloboDialogo",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
