@@ -74,6 +74,26 @@
 			"sid": 383474440830193
 		},
 		{
+			"eventType": "variable",
+			"name": "Mision0_Empezar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 455452888265157
+		},
+		{
+			"eventType": "variable",
+			"name": "Mision0_Completada",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 403654766400580
+		},
+		{
 			"eventType": "comment",
 			"text": "//// Variables del sistema de Codigo ////"
 		},
@@ -843,20 +863,20 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 866392196990052
+							"sid": 933739315672150
 						}
 					],
 					"actions": [
 						{
 							"id": "set-visible",
 							"objectClass": "Press_E",
-							"sid": 973300952517140,
+							"sid": 484246203615716,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 491041662037856
+					"sid": 913680829994770
 				}
 			],
 			"sid": 936253769514568
@@ -1042,6 +1062,237 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "//// Misión 0 = Encendedor ////"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mision 0",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 131787376268905
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_E4",
+							"sid": 149258508761770,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E4",
+							"sid": 565115215599252,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						}
+					],
+					"sid": 685065438730153
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 832377511898848,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 739780803565198,
+							"parameters": {
+								"object": "DialogoTrigger4"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger4",
+							"sid": 691501758466808,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Dialogo",
+							"sid": 459000326533370,
+							"parameters": [
+								"\"¿Cuánto más va a tardar esté pibe? Se llevó mi encendedor\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 495843914089228,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 642684933555355,
+							"parameters": [
+								"\"Encima ya es tarde, no lo van a dejar entregar\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 812237768414341,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 234043218945018,
+							"parameters": [
+								"\"O se prende fuego algo o no tiene excusa\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 117918262128413,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 726698791931015
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger4",
+							"sid": 254415437747549,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-4"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 322072137557815,
+							"parameters": {
+								"variable": "Mision0_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 116926253992123
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 478047084817530,
+							"parameters": {
+								"object": "DialogoTrigger4"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger4",
+							"sid": 136802931973009,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E4",
+							"sid": 117692310361407,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 512168148114877
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 790564398089595
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E4",
+							"sid": 318868502861885,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 444809505202493
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 857232297304256,
+							"parameters": {
+								"variable": "Mision0_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision2",
+							"sid": 285875078910632,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella2",
+							"sid": 654752832729632,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 871694313620526
+				}
+			],
+			"sid": 653876031857437
+		},
+		{
+			"eventType": "comment",
 			"text": "Mision 1 = Mision Sillas de Ruedas, Guardias Hambrientos y Codigo Comedor"
 		},
 		{
@@ -1051,6 +1302,463 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "//// Dialogo 2 //// (Chica Silla de Ruedas)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 140438642008310
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_E2",
+							"sid": 337093849548844,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E2",
+							"sid": 323410177053851,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						}
+					],
+					"sid": 932797988718416
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 128450059782595,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 131991684739142,
+							"parameters": {
+								"object": "DialogoTrigger2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger2",
+							"sid": 273241120612870,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Dialogo",
+							"sid": 954898555416969,
+							"parameters": [
+								"\"Voy a parecer loca hablando con animales, pero es mi única opción\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 269670893330436,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 586238436471155,
+							"parameters": [
+								"\"Necesito entregar esté trabajo en el piso de arriba, pero los ascensores no están funcionando\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 157879641728564,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 947835289942374,
+							"parameters": [
+								"\"¿Podrías entregarlo por mí?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 890025592232737,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 745452938954637
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger2",
+							"sid": 584354336155592,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 141395376956578,
+							"parameters": {
+								"variable": "Mision1_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 753325641842091
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 702374089533243,
+							"parameters": {
+								"object": "DialogoTrigger2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger2",
+							"sid": 166371919223878,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E2",
+							"sid": 250039683921480,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 847940814937885
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 957859257214832
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E2",
+							"sid": 933117612877051,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 811379607531912
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 586934740951202,
+							"parameters": {
+								"variable": "Mision1_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision1",
+							"sid": 800230683145913,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella",
+							"sid": 873656434004191,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 757762424479893
+				},
+				{
+					"eventType": "comment",
+					"text": "//// Dialogo 3 ////  (Guardias Escalera)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 394867607660227
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_E3",
+							"sid": 795631681449859,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E3",
+							"sid": 696987013873718,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						}
+					],
+					"sid": 922708884991692
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 286568824354795,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 529651686948146,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 969369796594208,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Dialogo",
+							"sid": 432128152605122,
+							"parameters": [
+								"\"Che! Que hambre manejo... ¿Alguno va a ir al Comedor?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 975970308411112,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 449572359242488,
+							"parameters": [
+								"\"... (Se escuchan ruidos de grillo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 850783844057918,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 467031240249432,
+							"parameters": [
+								"\"... (Son totalmente extradiegéticos)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 666517245968585,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 311487169535818,
+							"parameters": [
+								"\"Bueno... Yo tampoco me iba a mover\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 640896353969568,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 170411597654489
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger3",
+							"sid": 584685537633593,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-3"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 113963062831161,
+							"parameters": {
+								"variable": "Mision1_Comida_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 305909390668864
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 904892753071815,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 817415975956636,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E3",
+							"sid": 694887970630542,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 294500395669638
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 833670379964320
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E3",
+							"sid": 336232922200976,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 874782680827209
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 758656119839881,
+							"parameters": {
+								"variable": "Mision1_Comida_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision3",
+							"sid": 988952051141526,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella3",
+							"sid": 878304269132834,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 104706409948794
+				},
 				{
 					"eventType": "comment",
 					"text": "/////COSO DEL CODIGO/////"

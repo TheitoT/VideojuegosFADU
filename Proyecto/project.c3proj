@@ -114,9 +114,7 @@
 	],
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
-		"items": [
-			"DialogoTrigger"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -150,9 +148,23 @@
 					"PuertaAlumnos",
 					"Exclamación",
 					"Viaje_Comedor",
-					"Press_E_Codigo"
+					"Press_E_Codigo",
+					"Press_E2",
+					"Press_E3",
+					"Press_E4"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"DialogoTrigger",
+							"DialogoTrigger2",
+							"DialogoTrigger3",
+							"DialogoTrigger4"
+						],
+						"subfolders": [],
+						"name": "DialogosTriggers"
+					}
+				],
 				"name": "Herramientas"
 			},
 			{
@@ -167,7 +179,10 @@
 							"Estudiante2",
 							"Guardia1",
 							"Guardia2",
-							"Guardia3"
+							"Guardia3",
+							"Sprite5",
+							"Estudiante3",
+							"Sprite6"
 						],
 						"subfolders": [],
 						"name": "Personajes"
@@ -206,7 +221,22 @@
 					},
 					{
 						"items": [
-							"NegroPausa"
+							"NegroPausa",
+							"Huella",
+							"Misiones",
+							"Huella2",
+							"Huella3",
+							"Huella4",
+							"Huella5",
+							"Huella6",
+							"Huella7",
+							"Mision1",
+							"Mision2",
+							"Mision3",
+							"Mision4",
+							"Mision5",
+							"Mision6",
+							"Mision7"
 						],
 						"subfolders": [],
 						"name": "HUD"
