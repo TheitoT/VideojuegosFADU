@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -151,7 +158,10 @@
 					"Press_E_Codigo",
 					"Press_E2",
 					"Press_E3",
-					"Press_E4"
+					"Press_E4",
+					"ConoVision",
+					"ManoGuardia",
+					"Jaula"
 				],
 				"subfolders": [
 					{
@@ -182,7 +192,8 @@
 							"Guardia3",
 							"Sprite5",
 							"Estudiante3",
-							"Sprite6"
+							"Sprite6",
+							"GuardiaPatio1"
 						],
 						"subfolders": [],
 						"name": "Personajes"

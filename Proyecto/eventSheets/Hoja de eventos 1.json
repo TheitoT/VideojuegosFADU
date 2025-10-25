@@ -128,6 +128,16 @@
 			"sid": 464901093936084
 		},
 		{
+			"eventType": "variable",
+			"name": "Inmovil",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 505222507545486
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -2211,6 +2221,145 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 695037049211376
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Guardias",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 472584099363556
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "ManoGuardia",
+							"sid": 111133429422574,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "GuardiaPatio1",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "ConoVision",
+							"sid": 231324171260775,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "ManoGuardia",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 178843526298597
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "ConoVision",
+							"sid": 689595693435952,
+							"parameters": {
+								"object": "EnriqueElCubo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 429354345050194,
+							"parameters": {
+								"variable": "Inmovil",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriqueElCubo",
+							"sid": 192474759417260,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Jaula",
+							"sid": 618153366587801,
+							"parameters": {
+								"x": "EnriqueElCubo.X",
+								"y": "EnriqueElCubo.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula",
+							"sid": 464363664206221,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 437573870660236,
+							"parameters": {
+								"seconds": "10",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula",
+							"sid": 302822448976607,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 590127557128660,
+							"parameters": {
+								"variable": "Inmovil",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriqueElCubo",
+							"sid": 821324990018624,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 495121132939036
+				}
+			],
+			"sid": 146799562327789
 		}
 	],
 	"sid": 281853114665437

@@ -1,0 +1,64 @@
+{
+	"name": "GuardiaPatio1",
+	"plugin-id": "Sprite",
+	"sid": 693354315603413,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 197485759783425
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5849477,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0.125,
+								0.75,
+								0.125,
+								0.75,
+								0.90625,
+								0.6875,
+								1,
+								0.3125,
+								1,
+								0.1875,
+								0.3125,
+								0.25,
+								0.1875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 588715428679218,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
