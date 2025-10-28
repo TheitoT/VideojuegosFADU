@@ -380,34 +380,57 @@
 										"comparison": 1,
 										"value": "0"
 									}
-								},
-								{
-									"id": "pick-by-unique-id",
-									"objectClass": "Escuadra",
-									"sid": 565298380176707,
-									"parameters": {
-										"unique-id": "UID_objeto_agarrado"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 100603403219767,
+							"children": [
 								{
-									"id": "unpin",
-									"objectClass": "Escuadra",
-									"sid": 632359565731589,
-									"behaviorType": "Pin"
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 926619679938650,
-									"parameters": {
-										"variable": "UID_objeto_agarrado",
-										"value": "0"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 684200669025636,
+											"parameters": {
+												"object": "Escuadra",
+												"expression": "Escuadra.UID",
+												"comparison": 0,
+												"value": "UID_objeto_agarrado"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-layer",
+											"objectClass": "Escuadra",
+											"sid": 873700591857143,
+											"parameters": {
+												"layer": "\"Personajes\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Escuadra",
+											"sid": 598894824877079,
+											"parameters": {
+												"x": "EnriqueElCubo.X",
+												"y": "EnriqueElCubo.Y + 16"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 257010709085153,
+											"parameters": {
+												"variable": "UID_objeto_agarrado",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 688736079147461
 								}
-							],
-							"sid": 100603403219767
+							]
 						},
 						{
 							"eventType": "block",
@@ -415,44 +438,63 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 939550181420174
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "EnriqueElCubo",
-									"sid": 990647672315495,
-									"parameters": {
-										"object": "Escuadra"
-									}
+									"sid": 479113637386552
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 804485432448295,
+							"children": [
 								{
-									"id": "pin-to-object-properties",
-									"objectClass": "Escuadra",
-									"sid": 260243690519283,
-									"behaviorType": "Pin",
-									"parameters": {
-										"pin-to": "EnriqueElCubo",
-										"x": true,
-										"y": true,
-										"angle": true,
-										"width-type": "no",
-										"height-type": "no",
-										"z": false
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 798959992503662,
-									"parameters": {
-										"variable": "UID_objeto_agarrado",
-										"value": "Escuadra.UID"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "EnriqueElCubo",
+											"sid": 340167645877309,
+											"parameters": {
+												"object": "Escuadra"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-layer",
+											"objectClass": "Escuadra",
+											"sid": 287759385153704,
+											"parameters": {
+												"layer": "\"Inventario\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Escuadra",
+											"sid": 653453701876240,
+											"parameters": {
+												"x": "Inventario.x",
+												"y": "Inventario.Y + 32"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Escuadra",
+											"sid": 331794252420297,
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 897875962126051,
+											"parameters": {
+												"variable": "UID_objeto_agarrado",
+												"value": "Escuadra.UID"
+											}
+										}
+									],
+									"sid": 603131264671462
 								}
-							],
-							"sid": 299350014695722
+							]
 						}
 					]
 				}

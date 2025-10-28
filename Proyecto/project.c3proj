@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 45800,
+	"savedWithRelease": 45802,
 	"name": "AnimalitosDeLaReserva",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -161,7 +161,8 @@
 					"Press_E4",
 					"ConoVision",
 					"ManoGuardia",
-					"Jaula"
+					"Jaula",
+					"Inventario"
 				],
 				"subfolders": [
 					{
