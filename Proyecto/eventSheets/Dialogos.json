@@ -24,7 +24,6 @@
 					"id": "set-visible",
 					"objectClass": "Dialogo",
 					"sid": 127760044741819,
-					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -33,7 +32,6 @@
 					"id": "set-visible",
 					"objectClass": "GloboDialogo",
 					"sid": 288671872957511,
-					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -81,7 +79,6 @@
 					"id": "set-visible",
 					"objectClass": "Dialogo",
 					"sid": 641792485021025,
-					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -90,7 +87,6 @@
 					"id": "set-visible",
 					"objectClass": "GloboDialogo",
 					"sid": 278476455873191,
-					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
 					}

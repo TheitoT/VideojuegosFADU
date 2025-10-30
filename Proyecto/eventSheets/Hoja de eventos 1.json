@@ -786,6 +786,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger",
+							"sid": 167567753599246,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 805090649241587,
 							"parameters": [
@@ -832,16 +841,7 @@
 						},
 						{
 							"callFunction": "DestruirDialogo",
-							"sid": 436743174576542
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogoTrigger",
-							"sid": 975609692558552,
-							"parameters": {
-								"instance-variable": "ID",
-								"value": "-1"
-							}
+							"sid": 924043450949525
 						}
 					],
 					"sid": 762143665529919
@@ -1184,6 +1184,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger4",
+							"sid": 830723511395898,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-4"
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 459000326533370,
 							"parameters": [
@@ -1231,15 +1240,6 @@
 						{
 							"callFunction": "DestruirDialogo",
 							"sid": 726698791931015
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogoTrigger4",
-							"sid": 254415437747549,
-							"parameters": {
-								"instance-variable": "ID",
-								"value": "-4"
-							}
 						},
 						{
 							"id": "set-boolean-eventvar",
@@ -1419,6 +1419,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger2",
+							"sid": 397762075608593,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-2"
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 954898555416969,
 							"parameters": [
@@ -1466,15 +1475,6 @@
 						{
 							"callFunction": "DestruirDialogo",
 							"sid": 745452938954637
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogoTrigger2",
-							"sid": 584354336155592,
-							"parameters": {
-								"instance-variable": "ID",
-								"value": "-2"
-							}
 						},
 						{
 							"id": "set-boolean-eventvar",
@@ -1640,6 +1640,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger3",
+							"sid": 391342764480924,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-3"
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 432128152605122,
 							"parameters": [
@@ -1702,15 +1711,6 @@
 						{
 							"callFunction": "DestruirDialogo",
 							"sid": 170411597654489
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogoTrigger3",
-							"sid": 584685537633593,
-							"parameters": {
-								"instance-variable": "ID",
-								"value": "-3"
-							}
 						},
 						{
 							"id": "set-boolean-eventvar",
