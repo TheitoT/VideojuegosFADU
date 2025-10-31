@@ -1,50 +1,32 @@
 {
-	"name": "ConoVision",
+	"name": "CapiHUD",
 	"plugin-id": "Sprite",
-	"sid": 502357001554227,
+	"sid": 958056874747305,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 524119517741773
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 17,
+						"height": 17,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7793292,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.11599996948242187,
-								1,
-								0.503999969482422,
-								1,
-								0.523999877929687,
-								0,
-								0.9139998779296874
-							]
-						},
+						"imageSpriteId": 1093552,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 711074663476199,
+				"sid": 417384814133403,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
