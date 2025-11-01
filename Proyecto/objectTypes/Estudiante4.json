@@ -1,11 +1,17 @@
 {
-	"name": "Sprite6",
+	"name": "Estudiante4",
 	"plugin-id": "Sprite",
-	"sid": 344129307243078,
+	"sid": 177841469770742,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 385258266215450
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,43 +26,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4004559,
-						"collisionPoly": {
-							"points": [
-								0.5,
-								0.125,
-								0.625,
-								0.125,
-								0.6875,
-								0.15625,
-								0.875,
-								0.40625,
-								0.9375,
-								0.625,
-								0.9375,
-								0.6875,
-								0.875,
-								1,
-								0.125,
-								1,
-								0.0625,
-								0.6875,
-								0.0625,
-								0.625,
-								0.125,
-								0.40625,
-								0.25,
-								0.21875,
-								0.375,
-								0.15625
-							]
-						},
+						"imageSpriteId": 9519560,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 131284688811765,
+				"sid": 654392473061740,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

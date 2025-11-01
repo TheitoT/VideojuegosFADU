@@ -142,6 +142,44 @@
 			"sid": 505222507545486
 		},
 		{
+			"eventType": "comment",
+			"text": "//// Objetos ////"
+		},
+		{
+			"eventType": "variable",
+			"name": "Sanguche",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 737200534723077
+		},
+		{
+			"eventType": "variable",
+			"name": "Migas",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 501076148019271
+		},
+		{
+			"eventType": "comment",
+			"text": "//// Inventario ////"
+		},
+		{
+			"eventType": "variable",
+			"name": "Capinventario",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 326304652982185
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -268,6 +306,15 @@
 							"parameters": {
 								"object": "Sanguche"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 174006780817187,
+							"parameters": {
+								"variable": "Capinventario"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -277,20 +324,169 @@
 							"sid": 370946428691599
 						},
 						{
-							"id": "create-object",
+							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 450250650745902,
+							"sid": 767183651735996,
 							"parameters": {
-								"object-to-create": "Sanguche",
-								"layer": "\"InventarioHUD\"",
-								"x": "576",
-								"y": "320",
-								"create-hierarchy": false,
-								"template-name": "\"\""
+								"variable": "Sanguche",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 456429184375156,
+							"parameters": {
+								"variable": "Capinventario",
+								"value": "true"
 							}
 						}
 					],
 					"sid": 647433752604814
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 268779314048139,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 971915142817256,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 713196045499144
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 809113266244968,
+									"parameters": {
+										"object-to-create": "Sanguche",
+										"layer": "\"InventarioHUD\"",
+										"x": "576",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Sanguche",
+									"sid": 511993771119878
+								}
+							],
+							"sid": 244609400741753
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 976268330868469,
+							"parameters": {
+								"object": "Migas"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 470373608452548,
+							"parameters": {
+								"variable": "Capinventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Migas",
+							"sid": 481508624013858
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 110135779797289,
+							"parameters": {
+								"variable": "Migas",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 308895915812253,
+							"parameters": {
+								"variable": "Capinventario",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 611095614504911
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 804316083032668,
+							"parameters": {
+								"variable": "Migas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 673405798794146,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 344181162153867
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 486802309605124,
+									"parameters": {
+										"object-to-create": "Migas",
+										"layer": "\"InventarioHUD\"",
+										"x": "576",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Migas",
+									"sid": 771927454683088
+								}
+							],
+							"sid": 412695351061882
+						}
+					]
 				}
 			],
 			"sid": 742613651456628
@@ -1608,6 +1804,22 @@
 							"parameters": {
 								"y": "EnriqueElCubo.Y-32"
 							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_E3_2",
+							"sid": 585816625447463,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E3_2",
+							"sid": 692216537589288,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
 						}
 					],
 					"sid": 922708884991692
@@ -1814,6 +2026,198 @@
 						}
 					],
 					"sid": 104706409948794
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 489190046308048,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 857181681716664,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 737085039765388,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 630143078079972,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger3",
+							"sid": 506425492334420,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-300"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 226954745452166,
+							"parameters": [
+								"\"¿Y esté sanguche?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 382017809301872,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 964755346539791,
+							"parameters": [
+								"\"(Come el sanguche demasiado rápido)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 511525476222520,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 881174388664582,
+							"parameters": [
+								"\"(Caen algunos pedazos quizá sirva de algo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 628423509199797,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 138215554355571
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 674770415944551,
+							"parameters": {
+								"object-to-create": "Migas",
+								"layer": "\"Personajes\"",
+								"x": "928",
+								"y": "672",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 501413488979464,
+							"parameters": {
+								"variable": "Capinventario"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Sanguche",
+							"sid": 495900289784534,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						}
+					],
+					"sid": 327240241144822
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 989899266348812,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 403362781497283,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 234188140273368,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E3",
+							"sid": 354332473006028,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 645404519064273
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 849169493170776
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E3_2",
+							"sid": 721667847230760,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 278460361888705
 				},
 				{
 					"eventType": "comment",

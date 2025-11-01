@@ -1,23 +1,15 @@
 {
-	"name": "DialogoTrigger4",
+	"name": "EstanteGordo",
 	"plugin-id": "Sprite",
-	"sid": 679452520173297,
+	"sid": 413918180094390,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 341280682142465
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 211662680044837
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 579668610639625
 		}
 	],
 	"effectTypes": [],
@@ -26,21 +18,21 @@
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 30,
+						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5139494,
+						"imageSpriteId": 3053676,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 243923127272777,
+				"sid": 822823436504213,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

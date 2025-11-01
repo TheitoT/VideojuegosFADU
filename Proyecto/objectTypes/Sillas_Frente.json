@@ -1,15 +1,15 @@
 {
-	"name": "Sanguche",
+	"name": "Sillas_Frente",
 	"plugin-id": "Sprite",
-	"sid": 186553736884214,
-	"isGlobal": true,
+	"sid": 395766114277415,
+	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 190098306441503
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 912253406711009
 		}
 	],
 	"effectTypes": [],
@@ -18,37 +18,33 @@
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 16,
+						"width": 14,
+						"height": 19,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9969900,
+						"imageSpriteId": 4529023,
 						"collisionPoly": {
 							"points": [
-								0.5,
-								0.125,
-								0.5625,
-								0.125,
-								0.9375,
-								0.4375,
-								0.9375,
-								0.625,
-								0.875,
-								0.6875,
-								0.3125,
-								0.875,
-								0.0625,
-								0.875,
+								0.07142857142857142,
+								0.05263157894736842,
+								0.8571428571428571,
+								0.05263157894736842,
+								0.9285714285714286,
+								0.5263157894736842,
+								0.9285714285714286,
+								0.7368421052631579,
+								0.7857142857142857,
+								0.9473684210526315,
+								0.14285714285714285,
+								0.9473684210526315,
 								0,
-								0.75,
+								0.7368421052631579,
 								0,
-								0.6875,
-								0.0625,
-								0.5625
+								0.5263157894736842
 							]
 						},
 						"useCollisionPoly": true,
@@ -56,7 +52,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 354818983604972,
+				"sid": 389675245087644,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

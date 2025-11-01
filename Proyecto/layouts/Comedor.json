@@ -865,7 +865,11 @@
 					"sid": 485619479425014,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 485619479425014,
 						"expanded": true
@@ -967,7 +971,7 @@
 				1,
 				1,
 				1,
-				1
+				0.7
 			],
 			"backgroundColor": [
 				0.3686274509803922,

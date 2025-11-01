@@ -1,17 +1,11 @@
 {
-	"name": "Sanguche",
+	"name": "Migas",
 	"plugin-id": "Sprite",
-	"sid": 186553736884214,
+	"sid": 477509491246918,
 	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 190098306441503
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -26,29 +20,31 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9969900,
+						"imageSpriteId": 4212543,
 						"collisionPoly": {
 							"points": [
-								0.5,
-								0.125,
 								0.5625,
-								0.125,
-								0.9375,
-								0.4375,
-								0.9375,
-								0.625,
-								0.875,
-								0.6875,
-								0.3125,
-								0.875,
-								0.0625,
-								0.875,
-								0,
+								0.1875,
 								0.75,
-								0,
-								0.6875,
-								0.0625,
-								0.5625
+								0.1875,
+								0.9375,
+								0.375,
+								0.9375,
+								0.5,
+								0.5625,
+								0.875,
+								0.375,
+								0.9375,
+								0.3125,
+								0.9375,
+								0.25,
+								0.875,
+								0.1875,
+								0.625,
+								0.1875,
+								0.5625,
+								0.4375,
+								0.25
 							]
 						},
 						"useCollisionPoly": true,
@@ -56,7 +52,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 354818983604972,
+				"sid": 544724722740687,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,23 +1,15 @@
 {
-	"name": "DialogoTrigger4",
+	"name": "EscritorioAlumno",
 	"plugin-id": "Sprite",
-	"sid": 679452520173297,
+	"sid": 761590848708889,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 341280682142465
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 211662680044837
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 135940394904113
 		}
 	],
 	"effectTypes": [],
@@ -26,7 +18,7 @@
 			{
 				"frames": [
 					{
-						"width": 32,
+						"width": 97,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -34,13 +26,25 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5139494,
+						"imageSpriteId": 5599911,
+						"collisionPoly": {
+							"points": [
+								0.9955817378497791,
+								0,
+								1,
+								0.9017857142857146,
+								0,
+								0.9054176755447941,
+								0,
+								0.375
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 243923127272777,
+				"sid": 615847296419997,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

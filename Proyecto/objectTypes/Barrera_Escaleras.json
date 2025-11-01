@@ -1,23 +1,20 @@
 {
-	"name": "DialogoTrigger4",
+	"name": "Barrera_Escaleras",
 	"plugin-id": "Sprite",
-	"sid": 679452520173297,
+	"sid": 798428284481024,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 341280682142465
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 384058191133077
+		},
 		{
 			"behaviorId": "Persist",
 			"name": "Persist",
-			"sid": 211662680044837
+			"sid": 206725136113195
 		}
 	],
 	"effectTypes": [],
@@ -34,13 +31,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5139494,
+						"imageSpriteId": 1410868,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 243923127272777,
+				"sid": 977356496474675,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

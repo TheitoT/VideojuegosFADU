@@ -1,32 +1,18 @@
 {
-	"name": "DialogoTrigger4",
+	"name": "Estudiante5",
 	"plugin-id": "Sprite",
-	"sid": 679452520173297,
+	"sid": 911058040237484,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 341280682142465
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 211662680044837
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 32,
+						"width": 16,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -34,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5139494,
+						"imageSpriteId": 7411848,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 243923127272777,
+				"sid": 509879430188425,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

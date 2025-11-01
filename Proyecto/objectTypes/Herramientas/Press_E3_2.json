@@ -1,25 +1,11 @@
 {
-	"name": "DialogoTrigger4",
+	"name": "Press_E3_2",
 	"plugin-id": "Sprite",
-	"sid": 679452520173297,
+	"sid": 787004986016602,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "ID",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 341280682142465
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Persist",
-			"name": "Persist",
-			"sid": 211662680044837
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -34,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5139494,
+						"imageSpriteId": 9439729,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 243923127272777,
+				"sid": 868012239929437,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
