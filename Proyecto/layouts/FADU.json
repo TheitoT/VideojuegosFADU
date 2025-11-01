@@ -1956,7 +1956,7 @@
 							"properties": {
 								"movement": "vertical",
 								"wave": "sine",
-								"period": 4,
+								"period": 8,
 								"period-random": 0,
 								"period-offset": 0,
 								"period-offset-random": 0,
