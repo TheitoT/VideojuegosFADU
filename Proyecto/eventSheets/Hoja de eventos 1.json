@@ -2732,26 +2732,11 @@
 					"actions": [
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "ManoGuardia",
-							"sid": 111133429422574,
+							"objectClass": "ConoVision",
+							"sid": 944697713022942,
 							"behaviorType": "Pin",
 							"parameters": {
 								"pin-to": "GuardiaPatio1",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "ConoVision",
-							"sid": 231324171260775,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "ManoGuardia",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -2858,6 +2843,110 @@
 						}
 					],
 					"sid": 495121132939036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 433593205122262
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "ConoVision",
+							"sid": 632642590517334,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ConoVision",
+							"sid": 192916200943145,
+							"parameters": {
+								"x": "GuardiaPatio1.x",
+								"y": "GuardiaPatio1.y"
+							}
+						}
+					],
+					"sid": 785346794547842
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 301734168861493,
+							"parameters": {
+								"first-value": "GuardiaPatio1.y",
+								"comparison": 2,
+								"second-value": "GuardiaPatio1.UltimaY"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "ConoVision",
+							"sid": 637577957465651,
+							"parameters": {
+								"angle": "-270"
+							}
+						}
+					],
+					"sid": 948924395405660
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 169329290157371,
+							"parameters": {
+								"first-value": "GuardiaPatio1.Y",
+								"comparison": 4,
+								"second-value": "GuardiaPatio1.UltimaY"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "ConoVision",
+							"sid": 996666817494988,
+							"parameters": {
+								"angle": "-90"
+							}
+						}
+					],
+					"sid": 277522704491257
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 966650934729633
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "GuardiaPatio1",
+							"sid": 521754160266915,
+							"parameters": {
+								"instance-variable": "UltimaY",
+								"value": "GuardiaPatio1.Y"
+							}
+						}
+					],
+					"sid": 397621423189879
 				}
 			],
 			"sid": 146799562327789
