@@ -180,6 +180,16 @@
 			"sid": 326304652982185
 		},
 		{
+			"eventType": "variable",
+			"name": "EnriqueAtrapado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 547773890231596
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movimiento de Jugador",
@@ -2781,6 +2791,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 881609398361659,
+							"parameters": {
+								"variable": "EnriqueAtrapado",
+								"value": "true"
+							}
+						},
+						{
 							"id": "set-enabled",
 							"objectClass": "EnriqueElCubo",
 							"sid": 192474759417260,
@@ -2804,41 +2823,6 @@
 							"sid": 464363664206221,
 							"parameters": {
 								"visibility": "visible"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 437573870660236,
-							"parameters": {
-								"seconds": "10",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Jaula",
-							"sid": 302822448976607,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 590127557128660,
-							"parameters": {
-								"variable": "Inmovil",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "EnriqueElCubo",
-							"sid": 821324990018624,
-							"behaviorType": "8Direcciones",
-							"parameters": {
-								"state": "enabled"
 							}
 						}
 					],
@@ -2947,6 +2931,73 @@
 						}
 					],
 					"sid": 397621423189879
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 864364710385145,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 304882963391151,
+							"parameters": {
+								"variable": "EnriqueAtrapado"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 927325023414586,
+							"parameters": {
+								"object": "Jaula"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula",
+							"sid": 268697180126802,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 332144206027613,
+							"parameters": {
+								"variable": "EnriqueAtrapado",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 803593446233908,
+							"parameters": {
+								"variable": "Inmovil",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriqueElCubo",
+							"sid": 389905460809243,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 870681601271038
 				}
 			],
 			"sid": 146799562327789
