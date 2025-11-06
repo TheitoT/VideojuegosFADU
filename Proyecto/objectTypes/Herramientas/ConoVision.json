@@ -29,28 +29,80 @@
 						"imageSpriteId": 7793292,
 						"collisionPoly": {
 							"points": [
-								0.062,
-								0.20199996948242194,
+								0,
+								0.11921738201638937,
 								1,
 								0.503999969482422,
 								1,
 								0.523999877929687,
-								0.06400000000000003,
-								0.8299998779296873
+								0,
+								0.9120868344514262
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 0,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.988,
+						"originY": 0.516,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1752309,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.11921738201638937,
+								1,
+								0.503999969482422,
+								1,
+								0.523999877929687,
+								0,
+								0.9120868344514262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.988,
+						"originY": 0.516,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4348796,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.11921738201638937,
+								1,
+								0.503999969482422,
+								1,
+								0.523999877929687,
+								0,
+								0.9120868344514262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
 						"tag": ""
 					}
 				],
 				"sid": 711074663476199,
-				"name": "Animation 1",
+				"name": "ConoVision1_Animación",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []

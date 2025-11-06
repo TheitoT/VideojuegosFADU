@@ -149,6 +149,19 @@
 				}
 			],
 			"sid": 371566314370690
+		},
+		{
+			"functionName": "AtraparJugador",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 462759767419458
 		}
 	],
 	"sid": 366304931335047

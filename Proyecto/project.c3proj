@@ -142,7 +142,9 @@
 			"Empleado1",
 			"Estudiante4",
 			"Estudiante5",
-			"Sprite6"
+			"Sprite6",
+			"CargaSoltar_Enrique",
+			"CargaSoltar_Enriqueta"
 		],
 		"subfolders": [
 			{
@@ -186,7 +188,9 @@
 					"Jaula",
 					"Inventario",
 					"Press_E3_2",
-					"Jaula2"
+					"Jaula2",
+					"Press_E_Salvar",
+					"Press_Enter_Salvar"
 				],
 				"subfolders": [
 					{

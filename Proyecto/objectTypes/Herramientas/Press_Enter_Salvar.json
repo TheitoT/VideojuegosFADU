@@ -1,7 +1,7 @@
 {
-	"name": "Press_E",
+	"name": "Press_Enter_Salvar",
 	"plugin-id": "Sprite",
-	"sid": 802650382565785,
+	"sid": 870419123335836,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6764690,
+						"imageSpriteId": 6035123,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 128759071001198,
+				"sid": 373607220783343,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

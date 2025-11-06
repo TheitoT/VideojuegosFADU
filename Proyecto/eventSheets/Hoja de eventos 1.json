@@ -2219,8 +2219,8 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "Press_E3",
-							"sid": 354332473006028,
+							"objectClass": "Press_E3_2",
+							"sid": 260381532791313,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -2827,9 +2827,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "ConoVision",
-							"sid": 689595693435952,
+							"sid": 622705702584074,
 							"parameters": {
 								"object": "EnriqueElCubo"
 							}
@@ -2845,29 +2845,141 @@
 							}
 						}
 					],
+					"actions": [],
+					"sid": 495121132939036,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 223010014842196
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 424694250210758,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ConoVision",
+									"sid": 501386677759317,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 770607543028084,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ConoVision",
+									"sid": 277644622166106,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 246982566344340,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 887049671236854,
+									"parameters": {
+										"variable": "EnriqueInmovil",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 495359149260858,
+									"parameters": {
+										"variable": "EnriqueAtrapado",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 629938597968655
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 402786722054836
+						}
+					],
 					"actions": [
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 429354345050194,
+							"sid": 821176095975121,
 							"parameters": {
 								"variable": "EnriqueInmovil",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 881609398361659,
-							"parameters": {
-								"variable": "EnriqueAtrapado",
-								"value": "true"
+								"value": "0"
 							}
 						},
 						{
 							"id": "set-enabled",
 							"objectClass": "EnriqueElCubo",
-							"sid": 192474759417260,
+							"sid": 485275492164703,
+							"behaviorType": "8Direcciones",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula",
+							"sid": 661287582649720,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 196348327502295
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 107040131412305,
+							"parameters": {
+								"variable": "EnriqueAtrapado"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriqueElCubo",
+							"sid": 473314530482040,
 							"behaviorType": "8Direcciones",
 							"parameters": {
 								"state": "disabled"
@@ -2876,7 +2988,7 @@
 						{
 							"id": "set-position",
 							"objectClass": "Jaula",
-							"sid": 618153366587801,
+							"sid": 273644455636583,
 							"parameters": {
 								"x": "EnriqueElCubo.X",
 								"y": "EnriqueElCubo.Y"
@@ -2885,13 +2997,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "Jaula",
-							"sid": 464363664206221,
+							"sid": 500077980304108,
 							"parameters": {
 								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 495121132939036
+					"sid": 684678672770560
 				},
 				{
 					"eventType": "block",
@@ -3001,9 +3113,118 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 498292724225443
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter_Salvar",
+							"sid": 852129361043794,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter_Salvar",
+							"sid": 319656474047898,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 384591909817471,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 920139199732903,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 308467652638258
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 318462122711325,
+							"parameters": {
+								"object": "Jaula"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Jaula",
+							"sid": 255472647686984
+						}
+					],
+					"actions": [],
+					"sid": 638132462205006,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 887675046008174
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_Enter_Salvar",
+									"sid": 598400844906985,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 934863911125414
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 563047027118200
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Salvar",
+							"sid": 363478837682227,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 328689693202695
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
 							"objectClass": "Teclado",
-							"sid": 864364710385145,
+							"sid": 697700759591885,
 							"parameters": {
 								"key": 13
 							}
@@ -3025,11 +3246,180 @@
 							}
 						}
 					],
+					"actions": [],
+					"sid": 870681601271038,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 368261450420910
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_Enter_Salvar",
+									"sid": 383139470265774,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CargaSoltar_Enriqueta",
+									"sid": 719316250431905,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 690905588669337,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enriqueta",
+									"sid": 160485704135087,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 672611109207639,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enriqueta",
+									"sid": 541853270226271,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 147400507719818,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enriqueta",
+									"sid": 646174392597659,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 197442331505102,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enriqueta",
+									"sid": 659587711992418,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 431111207682200
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 765795231373969
+						}
+					],
 					"actions": [
 						{
 							"id": "set-visible",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 995658969064574,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 572204683929327,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 100793263516691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 999550046805424,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 520732717925097,
+							"parameters": {
+								"variable": "EnriqueAtrapado"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 445627561846667,
+							"parameters": {
+								"object": "Jaula"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 244866289480820,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "Jaula",
-							"sid": 268697180126802,
+							"sid": 125575869484214,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -3037,7 +3427,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 332144206027613,
+							"sid": 244117469431210,
 							"parameters": {
 								"variable": "EnriqueAtrapado",
 								"value": "false"
@@ -3046,7 +3436,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 803593446233908,
+							"sid": 823801133205374,
 							"parameters": {
 								"variable": "EnriqueInmovil",
 								"value": "0"
@@ -3055,22 +3445,38 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "EnriqueElCubo",
-							"sid": 389905460809243,
+							"sid": 208072895537673,
 							"behaviorType": "8Direcciones",
 							"parameters": {
 								"state": "enabled"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 691614766723019,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "CargaSoltar_Enriqueta",
+							"sid": 538055581326180,
+							"parameters": {
+								"frame-number": "0"
+							}
 						}
 					],
-					"sid": 870681601271038
+					"sid": 221993149687477
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "ConoVision",
-							"sid": 794404538668555,
+							"sid": 262825741465131,
 							"parameters": {
 								"object": "EnriquetaLaCuadrada"
 							}
@@ -3086,104 +3492,99 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 300344456854094,
+					"children": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 257911157001472,
-							"parameters": {
-								"variable": "EnriquetaInmovil",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 430209030953351,
-							"parameters": {
-								"variable": "EnriquetaAtrapada",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "EnriquetaLaCuadrada",
-							"sid": 658413947539417,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Jaula2",
-							"sid": 856220908000123,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Jaula2",
-							"sid": 635798362539295,
-							"parameters": {
-								"x": "EnriquetaLaCuadrada.X",
-								"y": "EnriquetaLaCuadrada.y"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 300934056348256
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 500640243156337,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ConoVision",
+									"sid": 648164975503560,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 627709578013358,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ConoVision",
+									"sid": 178202917984319,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 591105376087378,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 837810848410110,
+									"parameters": {
+										"variable": "EnriquetaInmovil",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 518542273716292,
+									"parameters": {
+										"variable": "EnriquetaAtrapada",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 455724631210905
 						}
-					],
-					"sid": 300344456854094
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
-							"objectClass": "Teclado",
-							"sid": 534846381850852,
-							"parameters": {
-								"key": 69
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
+							"id": "else",
 							"objectClass": "System",
-							"sid": 584701144151055,
-							"parameters": {
-								"variable": "EnriquetaAtrapada"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "EnriqueElCubo",
-							"sid": 357492974295233,
-							"parameters": {
-								"object": "Jaula2"
-							}
+							"sid": 837593605023824
 						}
 					],
 					"actions": [
 						{
-							"id": "set-visible",
-							"objectClass": "Jaula2",
-							"sid": 625362180079115,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 209457750499217,
-							"parameters": {
-								"variable": "EnriquetaAtrapada",
-								"value": "false"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 135718290579075,
+							"sid": 808797841703125,
 							"parameters": {
 								"variable": "EnriquetaInmovil",
 								"value": "0"
@@ -3192,14 +3593,468 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "EnriquetaLaCuadrada",
-							"sid": 649336649618960,
+							"sid": 790407842695292,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"state": "enabled"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula2",
+							"sid": 618804335860387,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
-					"sid": 845945458499097
+					"sid": 804463527572209
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 624516613752745,
+							"parameters": {
+								"variable": "EnriquetaAtrapada"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 681530597646421,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula2",
+							"sid": 636454634205138,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Jaula2",
+							"sid": 720181939862659,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X",
+								"y": "EnriquetaLaCuadrada.y"
+							}
+						}
+					],
+					"sid": 545231160591736
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "ConoVision",
+							"sid": 477117862477065,
+							"parameters": {
+								"object": "EnriqueElCubo"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "ConoVision",
+							"sid": 880844274783717,
+							"parameters": {
+								"object": "EnriquetaLaCuadrada"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 387166596011785,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ConoVision",
+							"sid": 343149955177639,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 762167347355091
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 712575360771265
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_E_Salvar",
+							"sid": 883679679742513,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_E_Salvar",
+							"sid": 605357881169859,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 639899136563274,
+							"parameters": {
+								"x": "EnriqueElCubo.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 929073883445011,
+							"parameters": {
+								"y": "EnriqueElCubo.Y-32"
+							}
+						}
+					],
+					"sid": 785380114166399
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 313776789742330,
+							"parameters": {
+								"object": "Jaula2"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Jaula2",
+							"sid": 625906836185368
+						}
+					],
+					"actions": [],
+					"sid": 194127509659795,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 199847204608478
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_E_Salvar",
+									"sid": 715461608071772,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 971042449908127
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 559318564857315
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_E_Salvar",
+							"sid": 342562444767813,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 906678538849849
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 627066979727198,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 989914418264642,
+							"parameters": {
+								"variable": "EnriquetaAtrapada"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 597500438804131,
+							"parameters": {
+								"object": "Jaula2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 326882708186067,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 801500937154432
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_E_Salvar",
+									"sid": 849141581181134,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CargaSoltar_Enrique",
+									"sid": 882790426071705,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 662231489637305,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enrique",
+									"sid": 708518561233913,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 205334623169761,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enrique",
+									"sid": 806474123270071,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 809815799678665,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enrique",
+									"sid": 139513728705311,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 116490108008628,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "CargaSoltar_Enrique",
+									"sid": 609181868298015,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 222470372754237
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 717095079645988
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 154665993545995,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 481016880885975,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 718426456851045
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 938176659354681,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 462300180292766,
+							"parameters": {
+								"variable": "EnriquetaAtrapada"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriqueElCubo",
+							"sid": 952207484808232,
+							"parameters": {
+								"object": "Jaula2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 950131876700117,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Jaula2",
+							"sid": 536153444697502,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 340003450224103,
+							"parameters": {
+								"variable": "EnriquetaAtrapada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 492392969943006,
+							"parameters": {
+								"variable": "EnriquetaInmovil",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 612688730458483,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 953499359013990,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "CargaSoltar_Enrique",
+							"sid": 786945453557646,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 383581553513169
 				},
 				{
 					"eventType": "block",
