@@ -235,7 +235,6 @@
 					"ParedesCamara",
 					"PUNTO_A",
 					"PUNTO_B",
-					"PlantaBajaMusic",
 					"RefPuerta",
 					"GloboDialogo",
 					"Dialogo",
@@ -254,7 +253,8 @@
 					"Trigger_OBJ_1",
 					"Trigger_OBJ_2",
 					"ConoVision2",
-					"ConoVision3"
+					"ConoVision3",
+					"Audio"
 				],
 				"subfolders": [
 					{
@@ -497,7 +497,8 @@
 			"MainMenuSheet",
 			"Dialogos",
 			"Más Misiones",
-			"Enriqueta"
+			"Enriqueta",
+			"Menu Final"
 		],
 		"subfolders": []
 	},
@@ -513,9 +514,177 @@
 		"music": {
 			"items": [
 				{
+					"name": "Alarma foley.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 966166065297733,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Cardenal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 315326678104985,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Impresora.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 812721155143951,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Llavero.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 205411420109411,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Puerta.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 847013128874872,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Menu final.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 149099900194845,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
 					"name": "Planta baja.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 780100006791164,
+					"sid": 987993900202591,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Androgino 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 644790905213088,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Androgino.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 397466552782612,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hombre 1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942360455304111,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hombre 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 928119044529710,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hombre 3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 696825758119249,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hombre 4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 259247990851600,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hombre 5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 524828091210018,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Limpieza 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 912491318556352,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Limpieza.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 900700082652281,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Mujer 1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 212673450465256,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Mujer 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 527427117642438,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Mujer 3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 902463921901298,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Mujer 4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 957938401033479,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Seguridad 1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 795781788746648,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Seguridad 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 534070458346702,
 					"file-info": {
 						"purpose": "none"
 					}

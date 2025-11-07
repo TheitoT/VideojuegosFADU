@@ -1311,6 +1311,18 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 286301709315881,
+									"parameters": {
+										"audio-file": "Impresora",
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "move-to-top",
 									"objectClass": "HojasBienImpresas",
 									"sid": 943113444030022
@@ -1744,6 +1756,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 156099885550697,
+							"parameters": {
+								"audio-file": "Mujer 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 443699120795834,
 							"parameters": [
@@ -1766,6 +1790,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 293582956016648,
+							"parameters": {
+								"audio-file": "Mujer 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 798174765691603,
@@ -1779,6 +1815,18 @@
 							"parameters": [
 								"\"(Hace unos ruidos molestos, mejor alejarse por el momento)\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 984399277080312,
+							"parameters": {
+								"audio-file": "Mujer 3",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2151,6 +2199,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 729566526268980,
+							"parameters": {
+								"audio-file": "Hombre 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 459000326533370,
 							"parameters": [
@@ -2173,6 +2233,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 646330668595558,
+							"parameters": {
+								"audio-file": "Hombre 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 812237768414341,
@@ -2186,6 +2258,18 @@
 							"parameters": [
 								"\"O se prende fuego algo o no tiene excusa\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 379832895674084,
+							"parameters": {
+								"audio-file": "Hombre 3",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2386,6 +2470,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 660421120428545,
+							"parameters": {
+								"audio-file": "Mujer 4",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"callFunction": "Dialogo",
 							"sid": 954898555416969,
 							"parameters": [
@@ -2408,6 +2504,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 389322591841385,
+							"parameters": {
+								"audio-file": "Mujer 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 157879641728564,
@@ -2421,6 +2529,18 @@
 							"parameters": [
 								"\"¿Podrías entregarlo por mí?\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 991325253090011,
+							"parameters": {
+								"audio-file": "Mujer 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2630,6 +2750,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 841135942751443,
+							"parameters": {
+								"audio-file": "Hombre 5",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 975970308411112,
@@ -2643,6 +2775,18 @@
 							"parameters": [
 								"\"... (Se escuchan ruidos de grillo)\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 692234269719754,
+							"parameters": {
+								"audio-file": "Seguridad 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2660,6 +2804,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 711264176155176,
+							"parameters": {
+								"audio-file": "Hombre 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 666517245968585,
@@ -2673,6 +2829,18 @@
 							"parameters": [
 								"\"Bueno... Yo tampoco me iba a mover\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 857938364239479,
+							"parameters": {
+								"audio-file": "Hombre 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2841,6 +3009,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 779549295981786,
+							"parameters": {
+								"audio-file": "Hombre 5",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 382017809301872,
@@ -2856,6 +3036,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 444419802729617,
+							"parameters": {
+								"audio-file": "Hombre 4",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 511525476222520,
@@ -2869,6 +3061,18 @@
 							"parameters": [
 								"\"(Caen algunos pedazos quizá sirva de algo)\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 498596012558130,
+							"parameters": {
+								"audio-file": "Hombre 3",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -3305,7 +3509,7 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "TxT_Entrada",
-							"sid": 302122638526644,
+							"sid": 380402814597497,
 							"parameters": {
 								"text": "CodigoActual",
 								"duration": "0"
@@ -4939,6 +5143,41 @@
 				}
 			],
 			"sid": 146799562327789
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Musica",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 493390910157258
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 305676444643977,
+							"parameters": {
+								"audio-file": "Planta baja",
+								"loop": "looping",
+								"volume": "-20",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 337945291312501
+				}
+			],
+			"sid": 708625796682985
 		}
 	],
 	"sid": 281853114665437

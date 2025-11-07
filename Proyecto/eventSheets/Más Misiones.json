@@ -1152,6 +1152,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 112345482603514,
+							"parameters": {
+								"audio-file": "Mujer 3",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 890327817848250,
@@ -1167,6 +1179,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 168860275308630,
+							"parameters": {
+								"audio-file": "Mujer 4",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 351120491367654,
@@ -1180,6 +1204,18 @@
 							"parameters": [
 								"\"¿Podrías buscarlo por mí?\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 568125250874492,
+							"parameters": {
+								"audio-file": "Mujer 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -1331,6 +1367,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 109688110177167,
+							"parameters": {
+								"audio-file": "Mujer 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 696887972768441,
@@ -1344,6 +1392,18 @@
 							"parameters": [
 								"\"Me siento... ¡Cenicienta!\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 326809044430636,
+							"parameters": {
+								"audio-file": "Mujer 3",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -1666,6 +1726,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 992172078344778,
+							"parameters": {
+								"audio-file": "Seguridad 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 210872015237443,
@@ -1681,6 +1753,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 861270812186064,
+							"parameters": {
+								"audio-file": "Seguridad 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 380583105257939,
@@ -1694,6 +1778,18 @@
 							"parameters": [
 								"\"(Te espanta con las manos)\""
 							]
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 155745218794213,
+							"parameters": {
+								"audio-file": "Hombre 2",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						},
 						{
 							"id": "wait-for-signal",
@@ -2435,6 +2531,18 @@
 							]
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 214895136911031,
+							"parameters": {
+								"audio-file": "Hombre 1",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "wait-for-signal",
 							"objectClass": "System",
 							"sid": 163696109910542,
@@ -3113,6 +3221,18 @@
 							"sid": 208917589509329,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 155030137683974,
+							"parameters": {
+								"audio-file": "Alarma foley",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
