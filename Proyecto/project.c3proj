@@ -129,22 +129,81 @@
 	"uniqueId": "oszcobnt6yw",
 	"objectTypes": {
 		"items": [
-			"InventarioHUD",
-			"CapiHUD",
-			"PajaroInventario",
-			"Sanguche",
-			"Barrera_Escaleras",
-			"Migas",
-			"EstaneFlaco",
-			"EstanteGordo",
-			"EscritorioAlumno",
-			"Sillas_Frente",
-			"Empleado1",
-			"Estudiante4",
-			"Estudiante5",
+			"USB",
+			"Buffet",
+			"Buffet2",
+			"Buffet3",
+			"Buffet4",
+			"Microondas",
+			"Golosionero",
+			"Golosionero2",
+			"Expendedora",
+			"Gaseosas",
 			"Sprite6",
-			"CargaSoltar_Enrique",
-			"CargaSoltar_Enriqueta"
+			"Sprite7",
+			"Sprite8",
+			"Sprite9",
+			"Sprite10",
+			"Sprite11",
+			"Sprite12",
+			"Tacho",
+			"Trigger_Sanguchito",
+			"Sprite14",
+			"Sprite15",
+			"Trigger_Hojas",
+			"Estudiante7",
+			"Estudiante8",
+			"Estudiante9",
+			"Estudiante10",
+			"Trigger_Estudiante9",
+			"Desalvo_Mueble",
+			"Mueble1Desalvo",
+			"Mueble2Desalvo",
+			"Mueble3Desalvo",
+			"Mueble4Desalvo",
+			"Revistero",
+			"Impresora",
+			"ImpresoraMal",
+			"LuzVerde",
+			"LuzVerde2",
+			"BloqueoPasoDesalvo",
+			"DesalvoWorker",
+			"Trigger_DesalvoWorker",
+			"Acrilicos_Bandeja",
+			"Trigger_Pinturas",
+			"PinturaCaida",
+			"Ojo",
+			"Trigger_Impresora",
+			"HojasBienImpresas",
+			"Estudiante9CLON",
+			"Trigger_Clon",
+			"Encendedor",
+			"DetectorHumo",
+			"TriggerFuego",
+			"FUEGO",
+			"Carpincho",
+			"Pajarito",
+			"Sprite13",
+			"Sprite16",
+			"Sprite17",
+			"Sprite18",
+			"Sprite19",
+			"Sprite20",
+			"Sprite21",
+			"Sprite22",
+			"Sprite23",
+			"Sprite24",
+			"Estudiante11",
+			"Estudiante12",
+			"Sprite25",
+			"Sprite26",
+			"Sprite27",
+			"Sprite28",
+			"Sprite29",
+			"Sprite30",
+			"Estudiante13",
+			"Sprite31",
+			"Sprite32"
 		],
 		"subfolders": [
 			{
@@ -174,23 +233,20 @@
 					"RefPuerta",
 					"GloboDialogo",
 					"Dialogo",
-					"Press_E",
 					"PuertaAFADU",
 					"PuertaAlumnos",
 					"Exclamación",
 					"Viaje_Comedor",
-					"Press_E_Codigo",
-					"Press_E2",
-					"Press_E3",
-					"Press_E4",
 					"ConoVision",
 					"ManoGuardia",
 					"Jaula",
 					"Inventario",
-					"Press_E3_2",
 					"Jaula2",
-					"Press_E_Salvar",
-					"Press_Enter_Salvar"
+					"Barrera_Escaleras",
+					"CargaSoltar_Enrique",
+					"CargaSoltar_Enriqueta",
+					"Trigger_OBJ_1",
+					"Trigger_OBJ_2"
 				],
 				"subfolders": [
 					{
@@ -202,6 +258,61 @@
 						],
 						"subfolders": [],
 						"name": "DialogosTriggers"
+					},
+					{
+						"items": [
+							"Press_E",
+							"Press_E2",
+							"Press_E3",
+							"Press_E3_2",
+							"Press_E4",
+							"Press_E5",
+							"Press_E5_2",
+							"Press_E6",
+							"Press_E_Codigo",
+							"Press_E_Hojas",
+							"Press_E_Salvar",
+							"Press_E_Sanguchito",
+							"Press_E_Hojas2",
+							"Press_E7",
+							"Press_E8",
+							"Press_E9",
+							"Press_E10",
+							"Press_E11",
+							"Press_E12",
+							"Press_E13",
+							"Press_E14",
+							"Press_E15"
+						],
+						"subfolders": [],
+						"name": "Press_E"
+					},
+					{
+						"items": [
+							"Press_Enter_Salvar",
+							"Press_Enter_Sanguchito",
+							"Press_Enter",
+							"Press_Enter4",
+							"Press_Enter2",
+							"Press_Enter3",
+							"Press_Enter3_2",
+							"Press_Enter_Codigo",
+							"Press_Enter5",
+							"Press_Enter5_2",
+							"Press_Enter6",
+							"Press_Enter_Hojas",
+							"Press_Enter7",
+							"Press_Enter11",
+							"Press_Enter8",
+							"Press_Enter9",
+							"Press_Enter10",
+							"Press_Enter12",
+							"Press_Enter13",
+							"Press_Enter14",
+							"Press_Enter15"
+						],
+						"subfolders": [],
+						"name": "PressEnter"
 					}
 				],
 				"name": "Herramientas"
@@ -222,7 +333,9 @@
 							"Sprite5",
 							"Estudiante3",
 							"Estudiante6",
-							"GuardiaPatio1"
+							"GuardiaPatio1",
+							"Estudiante4",
+							"Estudiante5"
 						],
 						"subfolders": [],
 						"name": "Personajes"
@@ -241,7 +354,8 @@
 							"NaranjaInutil",
 							"CirculitoInutil",
 							"ApagadoInutil",
-							"TXT_Opciones1"
+							"TXT_Opciones1",
+							"Cerrar_UI_Hojas"
 						],
 						"subfolders": [],
 						"name": "SpritesMenu"
@@ -254,7 +368,15 @@
 							"Sprite3",
 							"Sprite4",
 							"Sprite2",
-							"Lock"
+							"Lock",
+							"Empleado1",
+							"EscritorioAlumno",
+							"EstaneFlaco",
+							"EstanteGordo",
+							"Migas",
+							"Sanguche",
+							"Sillas_Frente",
+							"Migas2"
 						],
 						"subfolders": [],
 						"name": "Objetos"
@@ -276,7 +398,10 @@
 							"Mision4",
 							"Mision5",
 							"Mision6",
-							"Mision7"
+							"Mision7",
+							"CapiHUD",
+							"InventarioHUD",
+							"PajaroInventario"
 						],
 						"subfolders": [],
 						"name": "HUD"
@@ -308,6 +433,23 @@
 							}
 						],
 						"name": "UI_Codigo"
+					},
+					{
+						"items": [
+							"Mesita",
+							"Cocucha",
+							"Empanadita",
+							"Escaleras",
+							"Gatito",
+							"Lapicero",
+							"Medialuna",
+							"Papeles",
+							"Poster1",
+							"SevenUp",
+							"Silla"
+						],
+						"subfolders": [],
+						"name": "ObjetosPatio"
 					}
 				],
 				"name": "Sprites"
@@ -344,7 +486,9 @@
 		"items": [
 			"Hoja de eventos 1",
 			"MainMenuSheet",
-			"Dialogos"
+			"Dialogos",
+			"Más Misiones",
+			"Enriqueta"
 		],
 		"subfolders": []
 	},

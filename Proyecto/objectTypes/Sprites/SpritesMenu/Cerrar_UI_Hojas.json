@@ -1,0 +1,62 @@
+{
+	"name": "Cerrar_UI_Hojas",
+	"plugin-id": "Sprite",
+	"sid": 806612621653544,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 228,
+						"height": 228,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3061324,
+						"collisionPoly": {
+							"points": [
+								0.15789473684210525,
+								0.05263157894736842,
+								0.7894736842105263,
+								0.05263157894736842,
+								0.8947368421052632,
+								0.15789473684210525,
+								0.8947368421052632,
+								0.8421052631578947,
+								0.868421052631579,
+								0.8947368421052632,
+								0.7894736842105263,
+								0.9473684210526315,
+								0.15789473684210525,
+								0.9473684210526315,
+								0.05263157894736842,
+								0.8421052631578947,
+								0.05263157894736842,
+								0.15789473684210525
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 733059391260972,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

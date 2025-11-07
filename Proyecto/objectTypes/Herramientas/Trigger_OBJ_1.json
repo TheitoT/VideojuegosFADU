@@ -1,15 +1,23 @@
 {
-	"name": "Sanguche",
+	"name": "Trigger_OBJ_1",
 	"plugin-id": "Sprite",
-	"sid": 186553736884214,
-	"isGlobal": true,
+	"sid": 966280599508839,
+	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 890398472079442
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Persist",
 			"name": "Persist",
-			"sid": 190098306441503
+			"sid": 129044636363320
 		}
 	],
 	"effectTypes": [],
@@ -18,45 +26,21 @@
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 16,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9969900,
-						"collisionPoly": {
-							"points": [
-								0.5,
-								0.125,
-								0.5625,
-								0.125,
-								0.9375,
-								0.4375,
-								0.9375,
-								0.625,
-								0.875,
-								0.6875,
-								0.3125,
-								0.875,
-								0.0625,
-								0.875,
-								0,
-								0.75,
-								0,
-								0.6875,
-								0.0625,
-								0.5625
-							]
-						},
+						"imageSpriteId": 4581159,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 354818983604972,
+				"sid": 658006395151057,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

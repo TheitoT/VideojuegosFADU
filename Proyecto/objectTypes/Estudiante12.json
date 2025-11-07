@@ -1,0 +1,70 @@
+{
+	"name": "Estudiante12",
+	"plugin-id": "Sprite",
+	"sid": 707172401339597,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 534199877852012
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5225073,
+						"collisionPoly": {
+							"points": [
+								0.3125,
+								0.09375,
+								0.625,
+								0.09375,
+								0.75,
+								0.125,
+								0.8125,
+								0.15625,
+								0.875,
+								0.21875,
+								0.875,
+								0.4375,
+								0.6875,
+								1,
+								0.3125,
+								1,
+								0.1875,
+								0.34375,
+								0.1875,
+								0.125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 443648945146818,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

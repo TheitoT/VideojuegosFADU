@@ -1,0 +1,66 @@
+{
+	"name": "Buffet3",
+	"plugin-id": "Sprite",
+	"sid": 506520876168801,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 806930785335229
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 193,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8392904,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.059553349875930535,
+								0.02096266968863774,
+								0.06118126787943925,
+								0.021015309838732423,
+								0.35358220985917727,
+								0.04704736826992938,
+								0.3518476079088368,
+								0.046818840681263754,
+								0.418835442147713,
+								0.16582185184019244,
+								0.4198702381230132,
+								0.16485030474667745,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 784240354948351,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

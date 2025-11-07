@@ -1,7 +1,7 @@
 {
 	"name": "Sprite6",
 	"plugin-id": "Sprite",
-	"sid": 550481331971291,
+	"sid": 874636083237347,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 98,
-						"height": 256,
+						"width": 8,
+						"height": 8,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6292713,
+						"imageSpriteId": 1330088,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 728984638460195,
+				"sid": 679186051277708,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

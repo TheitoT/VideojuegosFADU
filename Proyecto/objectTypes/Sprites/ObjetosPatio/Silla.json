@@ -1,0 +1,66 @@
+{
+	"name": "Silla",
+	"plugin-id": "Sprite",
+	"sid": 380118468347522,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 322076365642194
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 17,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6601245,
+						"collisionPoly": {
+							"points": [
+								0.058823529411764705,
+								0.03333333333333333,
+								0.29411764705882354,
+								0.03333333333333333,
+								0.8823529411764706,
+								0.3333333333333333,
+								0.9411764705882353,
+								0.6,
+								0.9411764705882353,
+								1,
+								0.23529411764705882,
+								1,
+								0.11764705882352941,
+								0.8,
+								0.058823529411764705,
+								0.2
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 689728268558386,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"name": "Tacho",
+	"plugin-id": "Sprite",
+	"sid": 580187057691313,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 14,
+						"height": 17,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6531001,
+						"collisionPoly": {
+							"points": [
+								0.42857142857142855,
+								0.058823529411764705,
+								0.5714285714285714,
+								0.058823529411764705,
+								0.9285714285714286,
+								0.17647058823529413,
+								0.9285714285714286,
+								1,
+								0.07142857142857142,
+								1,
+								0.07142857142857142,
+								0.17647058823529413
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 644524845134086,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

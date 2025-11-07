@@ -1,0 +1,5451 @@
+{
+	"name": "Enriqueta",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Inventario (THEO)2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 593218933145739,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 636248497501081,
+							"parameters": {
+								"object": "Trigger_Sanguchito"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 959298026834003,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Sanguchito",
+							"sid": 888097235652414,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sanguche",
+							"sid": 912552659874775
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 398291917594142,
+							"parameters": {
+								"variable": "Sanguche",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 195070072814075,
+							"parameters": {
+								"variable": "Capinventario",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 814649365502550
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 697975494723314,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 743975179039508,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 495917321082155
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 579243109164654,
+									"parameters": {
+										"object-to-create": "Sanguche",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Sanguche",
+									"sid": 573636206256238
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Trigger_Sanguchito",
+									"sid": 447778950394682
+								}
+							],
+							"sid": 600647859158890
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 408792063540687,
+							"parameters": {
+								"object": "Migas"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 883662913451984,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Migas",
+							"sid": 758777946687199
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 602351761649620,
+							"parameters": {
+								"variable": "Migas",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 710843490401970,
+							"parameters": {
+								"variable": "PajaroInventario",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 398433857341802
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 456172881320207,
+							"parameters": {
+								"variable": "Migas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 957331896262774,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 755777815548310
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 424916552566654,
+									"parameters": {
+										"object-to-create": "Migas",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Migas",
+									"sid": 705240256285457
+								}
+							],
+							"sid": 836762680554030
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 368926687089368
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter_Sanguchito",
+							"sid": 185904042303588,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter_Sanguchito",
+							"sid": 514223569971973,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 692254221370679
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 905232252793392,
+							"parameters": {
+								"object": "Trigger_Sanguchito"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Sanguchito",
+							"sid": 720905216230375,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 428567260879441,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Sanguchito",
+							"sid": 601884781962416,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 438137013698405
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 751521577443105
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Sanguchito",
+							"sid": 394112278145539,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 590445191560328
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 758421081057049,
+							"parameters": {
+								"variable": "Mision1_Comida_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Sanguchito",
+							"sid": 307810317735063,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Sanguche",
+							"sid": 433896846686631,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 118236047501004
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 473787308223305
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 748355820968654,
+							"parameters": {
+								"variable": "SangucheOFF"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Sanguche",
+							"sid": 703558745890206,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 420765899934036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 958393062945794
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 526510746653855,
+							"parameters": {
+								"variable": "MigasOFF"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Migas",
+							"sid": 757028444087980,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 589584697073337
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 807807783235665
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 269585437433167,
+							"parameters": {
+								"variable": "USBOFF"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "USB",
+							"sid": 339339241246443,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 883664451077004
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 851789538339685
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 112911431559943,
+							"parameters": {
+								"variable": "HojasImpresasOFF"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "HojasBienImpresas",
+							"sid": 685222595095474,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 220314293330555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 161777353059483
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 828871980905059,
+							"parameters": {
+								"variable": "EncendedorOFF"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Encendedor",
+							"sid": 426258332885359,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 666070774781166
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 913423687111594,
+							"parameters": {
+								"variable": "HojasImpresas"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 812067275260652,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 686468300133820
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 633111073714690,
+									"parameters": {
+										"object-to-create": "HojasBienImpresas",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "HojasBienImpresas",
+									"sid": 307554945425474
+								}
+							],
+							"sid": 976880674572477
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 852881330701787,
+							"parameters": {
+								"variable": "Encendedor"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 636859892975642,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 808023543342703
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 579201809442786,
+									"parameters": {
+										"object-to-create": "Encendedor",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Encendedor",
+									"sid": 753918590864322
+								}
+							],
+							"sid": 204366153139694
+						}
+					]
+				}
+			],
+			"sid": 321597301794440
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogos2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 950413956405490,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 778660476019823,
+							"parameters": {
+								"object": "DialogoTrigger"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger",
+							"sid": 272476498765123,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger",
+							"sid": 674594786129701,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 777337742978673,
+							"parameters": [
+								"\"Necesito entrar a Desalvo, pero está lleno\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 643665003401785,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 168526881468029,
+							"parameters": [
+								"\"No puede ser que siempre deje todo para lo último\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 656720164723772,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 905318912760564,
+							"parameters": [
+								"\"(Hace unos ruidos molestos, mejor alejarse por el momento)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 581508130116592,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 545969629181305
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 534337442141900,
+							"parameters": {
+								"variable": "EstudianteDesalvo",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 989141378760726
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 866495141078000
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter",
+							"sid": 830505749693757,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter",
+							"sid": 167634627968506,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 541949258413454
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 226712916574077,
+							"parameters": {
+								"object": "DialogoTrigger"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger",
+							"sid": 645113303395986,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter",
+							"sid": 877366116965628,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 694537426523630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 740283477849122
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter",
+							"sid": 407014799251110,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 170302709457150
+				}
+			],
+			"sid": 908897143850886
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mision 0_Enriqueta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 387126689944467
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter4",
+							"sid": 923921204224239,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter4",
+							"sid": 788409829452512,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 938605839644019
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 654223559825526,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 474278637579130,
+							"parameters": {
+								"object": "DialogoTrigger4"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger4",
+							"sid": 490481866129260,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger4",
+							"sid": 743163969935449,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-4"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 752203093577768,
+							"parameters": [
+								"\"¿Cuánto más va a tardar esté pibe? Se llevó mi encendedor\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 355266373986013,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 207240170543725,
+							"parameters": [
+								"\"Encima ya es tarde, no lo van a dejar entregar\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 204221477506963,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 784133329349607,
+							"parameters": [
+								"\"O se prende fuego algo o no tiene excusa\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 964257958024719,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 415776510705327
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 844877498063132,
+							"parameters": {
+								"variable": "Mision0_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 771230773755188
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 873729068806615,
+							"parameters": {
+								"object": "DialogoTrigger4"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger4",
+							"sid": 430473901346816,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter4",
+							"sid": 572197774085635,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 176202698228526
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 774344693668999
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter4",
+							"sid": 825246319039831,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 996390308644444
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 267985016989571,
+							"parameters": {
+								"variable": "Mision0_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision2",
+							"sid": 220173875207164,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella2",
+							"sid": 518248729558834,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 681822759265782
+				}
+			],
+			"sid": 624518168839043
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mision1_Enriqueta",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "//// Dialogo 2 //// (Chica Silla de Ruedas)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 219987751616715
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter2",
+							"sid": 799609753225931,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter2",
+							"sid": 999042209078241,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 276966523406185
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 517077721505296,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 571105451339538,
+							"parameters": {
+								"object": "DialogoTrigger2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger2",
+							"sid": 297411667906525,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger2",
+							"sid": 480116887532488,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-2"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 258544722541113,
+							"parameters": [
+								"\"Voy a parecer loca hablando con animales, pero es mi única opción\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 656438232780612,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 449660527153128,
+							"parameters": [
+								"\"Necesito entregar esté trabajo en el piso de arriba, pero los ascensores no están funcionando\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 668139280339180,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 466254026254744,
+							"parameters": [
+								"\"¿Podrías entregarlo por mí?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 413682823260365,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 498701564778386
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 927636782568129,
+							"parameters": {
+								"variable": "Mision1_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 175321237968189
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 519283025709903,
+							"parameters": {
+								"object": "DialogoTrigger2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger2",
+							"sid": 655760221984001,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter2",
+							"sid": 851966689308377,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 741081541691547
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 674466293031765
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter2",
+							"sid": 740171445201090,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 696020325992264
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 144433025428194,
+							"parameters": {
+								"variable": "Mision1_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision1",
+							"sid": 568512138386349,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella",
+							"sid": 384145735417643,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 730001669155263
+				},
+				{
+					"eventType": "comment",
+					"text": "//// Dialogo 3 ////  (Guardias Escalera)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 161108111689287
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter3_2",
+							"sid": 636130552822570,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter3",
+							"sid": 706051670367881,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter3_2",
+							"sid": 690742325539122,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter3_2",
+							"sid": 652988496072446,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 851108700430615
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 792505059450770,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 421906104934841,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 347231102520220,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger3",
+							"sid": 260325831568420,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-3"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 978149683212098,
+							"parameters": [
+								"\"Che! Que hambre manejo... ¿Alguno va a ir al Comedor?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 220981788375573,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 833300497397031,
+							"parameters": [
+								"\"... (Se escuchan ruidos de grillo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 108992190766756,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 510516039768615,
+							"parameters": [
+								"\"... (Son totalmente extradiegéticos)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 346811413807346,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 362827824963883,
+							"parameters": [
+								"\"Bueno... Yo tampoco me iba a mover\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 479014081497433,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 718194691542520
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 922090847550156,
+							"parameters": {
+								"variable": "Mision1_Comida_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 916426484450364
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 785613848386931,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 699395437487196,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter3",
+							"sid": 216543182750349,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 542345412318177
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 329582436768549
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter3",
+							"sid": 734407544013241,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 387210972043664
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 756507982210722,
+							"parameters": {
+								"variable": "Mision1_Comida_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Mision3",
+							"sid": 298081112301851,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella3",
+							"sid": 616878622855037,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 121998925160941
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 569847227513797,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 938973890394062,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 575044044097077,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 389091553285229,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogoTrigger3",
+							"sid": 609076962323426,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-300"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 500415419785330,
+							"parameters": [
+								"\"¿Y esté sanguche?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 475447348270864,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 741363734921832,
+							"parameters": [
+								"\"(Come el sanguche demasiado rápido)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 563792720188247,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 541804562387009,
+							"parameters": [
+								"\"(Caen algunos pedazos quizá sirva de algo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 379412107330486,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 302549324073578
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 188995155471583,
+							"parameters": {
+								"object-to-create": "Migas",
+								"layer": "\"Personajes\"",
+								"x": "928",
+								"y": "672",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 281019651138311,
+							"parameters": {
+								"variable": "PajaroInventario"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sanguche",
+							"sid": 396322438217288
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "Mision3",
+							"sid": 642214307649128,
+							"parameters": {
+								"color": "rgbEx(45, 94, 0)"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 714111618100896,
+							"parameters": {
+								"variable": "SangucheOFF",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 424066205815705,
+							"parameters": {
+								"variable": "MisionMover",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 304765364797398
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 755120245999525,
+							"parameters": {
+								"object": "DialogoTrigger3"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "DialogoTrigger3",
+							"sid": 856936533473696,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 340736723142846,
+							"parameters": {
+								"variable": "Sanguche"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter3_2",
+							"sid": 929064325660820,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 512027099507448
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 917198336676351
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter3_2",
+							"sid": 112643982888184,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 663931676632715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 413722564293911,
+							"parameters": {
+								"variable": "MisionMover"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Huella7",
+							"sid": 196307322866627,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mision7",
+							"sid": 537488421377292,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 748998033321314
+				},
+				{
+					"eventType": "comment",
+					"text": "/////COSO DEL CODIGO/////"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 370346230674041
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter_Codigo",
+							"sid": 570650600235866,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter_Codigo",
+							"sid": 131658266579959,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 747243829804587
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 801648829497653
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 715625592281536,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Codigo",
+							"sid": 320653443411987,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 732698826033606
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "Lock",
+							"sid": 914976201823094,
+							"parameters": {
+								"which": "nearest",
+								"x": "EnriquetaLaCuadrada.X",
+								"y": "EnriquetaLaCuadrada.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 732521907194052,
+							"parameters": {
+								"variable": "CercaLock",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 600020759459684,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "EnriquetaLaCuadrada",
+									"sid": 269054037027375,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "Lock.X+34"
+									}
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "EnriquetaLaCuadrada",
+									"sid": 266191893443532,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "Lock.X-34"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriquetaLaCuadrada",
+									"sid": 731649584460875,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Lock.Y+34"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "EnriquetaLaCuadrada",
+									"sid": 556066299378207,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Lock.Y-34"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_Enter_Codigo",
+									"sid": 371137403765440,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 329356470246837
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 516084780747810
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Press_Enter_Codigo",
+									"sid": 342914648160311,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 533066236818395
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 768397086871044,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Press_Enter_Codigo",
+							"sid": 983173413719776
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Lock",
+							"sid": 805798112051603,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 256881710827379,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 293409729421882,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 852956672496284,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 773260903921422,
+							"parameters": {
+								"variable": "GuardiasComida",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mision4",
+							"sid": 123759494900490,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella4",
+							"sid": 306953435728419,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 803577547075355
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 316785168575746,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Txt_Codigo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 481316127398696,
+							"parameters": {
+								"variable": "CodigoActual",
+								"value": "CodigoActual&str(Txt_Codigo.NCodigo)"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "TxT_Entrada",
+							"sid": 792330395572073,
+							"parameters": {
+								"text": "CodigoActual",
+								"duration": "0"
+							}
+						}
+					],
+					"sid": 364874507158873,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 409080235541919,
+									"parameters": {
+										"first-value": "len(CodigoActual)",
+										"comparison": 0,
+										"second-value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 659409619768367,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 584023644483634,
+											"parameters": {
+												"first-value": "(CodigoActual)",
+												"comparison": 0,
+												"second-value": "(CodigoCorrecto)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 720748857304829,
+											"parameters": {
+												"text": "\"Correcto\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 793269059938841,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 404825737754409,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 347372598757435,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"interactive": false
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Press_Enter_Codigo",
+											"sid": 441280712370382
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Lock",
+											"sid": 181268370260138,
+											"parameters": {
+												"frame-number": "1"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Lock",
+											"sid": 892343169954356,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 799866269387901,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										}
+									],
+									"sid": 841562602463437
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 297686411484341
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 576024680915883,
+											"parameters": {
+												"text": "\"ERROR\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 413492387703754,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 304011911394272,
+											"parameters": {
+												"variable": "CodigoActual",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "TxT_Entrada",
+											"sid": 846150171177403,
+											"parameters": {
+												"text": "\"----\""
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 567295065065173,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 202063284153961,
+											"parameters": {
+												"layer": "\"UI-Codigo\"",
+												"interactive": false
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 721248890791003,
+											"parameters": {
+												"layout": "FADU"
+											}
+										},
+										{
+											"id": "set-time-scale",
+											"objectClass": "System",
+											"sid": 268539521284199,
+											"parameters": {
+												"time-scale": "1.0"
+											}
+										}
+									],
+									"sid": 847777927788911
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 174817932572315,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Txt_CerrarCodigo"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 388418672987530,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 114215001653037,
+							"parameters": {
+								"layer": "\"UI-Codigo\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 900448861601659,
+							"parameters": {
+								"variable": "CodigoActual",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TxT_Entrada",
+							"sid": 932797554078904,
+							"parameters": {
+								"text": "\"----\""
+							}
+						}
+					],
+					"sid": 430111659266497
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Lock",
+							"sid": 721930941010881,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Press_Enter_Codigo",
+							"sid": 287064380913833
+						}
+					],
+					"sid": 561879648840503
+				}
+			],
+			"sid": 689817095601172
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gato2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 406921923583398
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter5",
+							"sid": 593061761249455,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter5",
+							"sid": 942450414303752,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter5_2",
+							"sid": 962766782006200,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter5_2",
+							"sid": 926720774942144,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter6",
+							"sid": 711639958974001,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter6",
+							"sid": 898270286872171,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 204194836068878
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 638236082423614,
+							"parameters": {
+								"object": "Trigger_OBJ_1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 129949532649954,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter5",
+							"sid": 134744898956483,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 818852969714848
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 401203930563314
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter5",
+							"sid": 183416450212575,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 409656195368496
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 461408025339580,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 970126455633557,
+							"parameters": {
+								"object": "Trigger_OBJ_1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 263092146139251,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 531226636215831,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 718491578232610,
+							"parameters": [
+								"\"(Está durmiendo placidamente...)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 376399738714555,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 893595105564114,
+							"parameters": [
+								"\"(Que animales raros permiten entrar a la facultad hoy en día)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 212029424378928,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 803650546219248,
+							"parameters": [
+								"\"(Parece tener algo debajo suyo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 289252584649454,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 191722973426934
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 638402434587259,
+							"parameters": {
+								"variable": "Mision2_Gato_Empezar",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 102443258095189
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 409946513521626,
+							"parameters": {
+								"variable": "Mision2_Gato_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Huella5",
+							"sid": 291501881975850,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mision5",
+							"sid": 893062230635166,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 425390695851722
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 851965472167810,
+							"parameters": {
+								"object": "Trigger_OBJ_1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 836663913991816,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 246856969817864,
+							"parameters": {
+								"variable": "Migas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter5_2",
+							"sid": 769782409392438,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 782151636614659
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 530934274476707
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter5_2",
+							"sid": 748486838914798,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 298095061198432
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 505390170639794,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 824854904242213,
+							"parameters": {
+								"object": "Trigger_OBJ_1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 141523448172678,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 775283867546537,
+							"parameters": {
+								"variable": "Migas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_OBJ_1",
+							"sid": 374331216318621,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-100"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Gatito",
+							"sid": 590502649076592,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 360447666284495,
+							"parameters": [
+								"\"(Dejas las migas sobre el piso)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 287895376751460,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 652493842200805
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Migas",
+							"sid": 686060659693335,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 141593913663377,
+							"parameters": {
+								"variable": "PajaroInventario"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Migas2",
+							"sid": 320388268295313,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Gatito",
+							"sid": 443246466495424,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Gatito\"",
+								"property": "position",
+								"end-x": "1120",
+								"end-y": "608",
+								"time": "2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 933749134382781,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Migas2",
+							"sid": 903932954391830,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 352697173981631,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_OBJ_2",
+							"sid": 165340595646246,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 459009818202892,
+							"parameters": {
+								"variable": "MigasOFF",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 980299407731031
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 194201926409940,
+							"parameters": {
+								"object": "Trigger_OBJ_2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_2",
+							"sid": 969506477334424,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 989455500887214,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter6",
+							"sid": 821675709902397,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 581757446582156
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 223988836832644
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter6",
+							"sid": 600666400132886,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 815634152191826
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 971502325926027,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 797756034929077,
+							"parameters": {
+								"object": "Trigger_OBJ_2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_OBJ_2",
+							"sid": 389508655265461,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 576130345972387,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_OBJ_2",
+							"sid": 306698036896124,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-200"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "USB",
+							"sid": 820526655265301
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 806138409638343,
+							"parameters": {
+								"variable": "USB",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 392124842424823,
+							"parameters": {
+								"variable": "PajaroInventario",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 998950457310085
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 272817012797115,
+							"parameters": {
+								"variable": "USB"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 511570724639416,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 563948023956626
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 979618859194226,
+									"parameters": {
+										"object-to-create": "USB",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "USB",
+									"sid": 252159569719784
+								}
+							],
+							"sid": 284494655340786
+						}
+					]
+				}
+			],
+			"sid": 677560787940890
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Group4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 648651585330667
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 235399342873837,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 152191310544595,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 712010215289772
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 390175893745021
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter_Hojas",
+							"sid": 426791136590975,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter_Hojas",
+							"sid": 766750711005504,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 934947285445010
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 210373786849273,
+							"parameters": {
+								"variable": "EstudianteDesalvo"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 416553373156303,
+							"parameters": {
+								"variable": "GuardiasComida"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Hojas",
+							"sid": 988586779324283,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 514070398093666
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 851703606945337,
+							"parameters": {
+								"object": "Trigger_Hojas"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Hojas",
+							"sid": 970049296013940,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Hojas",
+							"sid": 191109537308560,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 370883841023173
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 734054632391240
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter_Hojas",
+							"sid": 257661432234637,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 833033277913242
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 206584093736940,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 944213656224194,
+							"parameters": {
+								"object": "Trigger_Hojas"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Hojas",
+							"sid": 638354662188164,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 721531780680004,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 499625069499768,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 451733305183906,
+							"parameters": {
+								"variable": "DesalvoPuerta",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 486272331760555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 554307145356978,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Cerrar_UI_Hojas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 814879078075338,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 268776545367873,
+							"parameters": {
+								"layer": "\"UI_ZoomMostrador\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 687864809310136
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 912071797548039,
+							"parameters": {
+								"variable": "DesalvoPuerta"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Estudiante7",
+							"sid": 883719591912157
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Estudiante8",
+							"sid": 943282566202645
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 610213874101199,
+							"parameters": {
+								"object-to-create": "Estudiante7",
+								"layer": "\"Personajes\"",
+								"x": "864",
+								"y": "256",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 768829390212140,
+							"parameters": {
+								"object-to-create": "Estudiante8",
+								"layer": "\"Personajes\"",
+								"x": "896",
+								"y": "256",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 571671675618161
+				}
+			],
+			"sid": 302900383789449,
+			"background-color": [
+				0.8235294117647058,
+				0.4745098039215686,
+				0.4745098039215686,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Group5",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 388802454657084
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter7",
+							"sid": 963138323626127,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter7",
+							"sid": 387631982734976,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter11",
+							"sid": 989170533073687,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter11",
+							"sid": 988573505655400,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 594979727966972
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 472276058187664,
+							"parameters": {
+								"object": "Trigger_Estudiante9"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 911300766443475,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter7",
+							"sid": 736901441088941,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 253363485037426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 376332854544538
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter7",
+							"sid": 485824514401510,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 808107752657555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 327614160338772,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 733242754729922,
+							"parameters": {
+								"object": "Trigger_Estudiante9"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 415965528462914,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 793275592066181,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 536572320624029,
+							"parameters": [
+								"\"¡No puede ser! Está todo mal impreso\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 665724976622885,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 728788022794912,
+							"parameters": [
+								"\"Encima... No se donde dejé el USB...\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 466976901302043,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 458864645972874,
+							"parameters": [
+								"\"¿Podrías buscarlo por mí?\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 400628338787766,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 307918391285397
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Huella6",
+							"sid": 240365910381176,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Mision6",
+							"sid": 525451290476557,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 340856707490251
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 593456432180885,
+							"parameters": {
+								"object": "Trigger_Estudiante9"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 518691734711717,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 748744282556286,
+							"parameters": {
+								"variable": "HojasImpresas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter11",
+							"sid": 380422988885933,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 763437049644011
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 321396931063059
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter11",
+							"sid": 405399559107030,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 440557326666510
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 822633471606443,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 468917682289271,
+							"parameters": {
+								"object": "Trigger_Estudiante9"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 575690114395367,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 874791167933934,
+							"parameters": {
+								"variable": "HojasImpresas"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Estudiante9",
+							"sid": 312958335238542,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-100"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 666051964273434,
+							"parameters": [
+								"\"Wow... Gracias, realmente no pensé que unos animales vayan a ayudarme\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 957537435890671,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 877509650281895,
+							"parameters": [
+								"\"Me siento... ¡Cenicienta!\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 975558418595390,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 141825807206285
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 867499193949138,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Estudiante9",
+							"sid": 460295374349930,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "416",
+								"end-y": "576",
+								"time": "5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 229136147767953,
+							"parameters": {
+								"variable": "HojaCompletado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 621776276307188,
+							"parameters": {
+								"variable": "HojasImpresasOFF",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 914666985105088
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Estudiante9",
+							"sid": 615445998407680,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "416"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Estudiante9",
+							"sid": 787607212194150,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "576"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Estudiante9",
+							"sid": 260029977042199
+						}
+					],
+					"sid": 237903908464987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 292216732262113,
+							"parameters": {
+								"variable": "HojaCompletado"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Estudiante9CLON",
+							"sid": 245897123521660,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Estudiante9CLON",
+							"sid": 845558896403078,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 894142990810095
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "Estudiante9CLON",
+							"sid": 243975760467899,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Estudiante9CLON",
+							"sid": 710745977323164,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 479563413059101
+				}
+			],
+			"sid": 768809102711968
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DesalvoMision2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 906668702629127
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter8",
+							"sid": 345780384381692,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter8",
+							"sid": 580988365553086,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter9",
+							"sid": 626714050729693,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter9",
+							"sid": 142371450329961,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter10",
+							"sid": 766244571372841,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter10",
+							"sid": 462046541603886,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 293869719473010
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 165320053310918,
+							"parameters": {
+								"object": "Trigger_DesalvoWorker"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_DesalvoWorker",
+							"sid": 177991866716559,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter8",
+							"sid": 474860297619696,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 230233004138342
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 775040576572131
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter8",
+							"sid": 994683279003426,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 443718685002897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 687904304976246,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 882413999400799,
+							"parameters": {
+								"object": "Trigger_DesalvoWorker"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_DesalvoWorker",
+							"sid": 928613695368563,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_DesalvoWorker",
+							"sid": 393189936279965,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 340939486616637,
+							"parameters": [
+								"\"No podes pasar por acá\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 438189638681787,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 156703513961605,
+							"parameters": [
+								"\"¡¡Fuera!! Shh Shh\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 153363150965781,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 109651517610772,
+							"parameters": [
+								"\"(Te espanta con las manos)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 438112809010009,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 979497154381879
+						}
+					],
+					"sid": 997059618259036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 583803259225609,
+							"parameters": {
+								"object": "Trigger_Pinturas"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Pinturas",
+							"sid": 788677493635757,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 168091876228433,
+							"parameters": {
+								"variable": "USB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter9",
+							"sid": 123822607779123,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 268509026128022
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 791035448455943
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter9",
+							"sid": 263467579467686,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 645567389557691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 348467296819208,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 235978226803929,
+							"parameters": {
+								"object": "Trigger_Pinturas"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Pinturas",
+							"sid": 938344978133699,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 683006254929652,
+							"parameters": {
+								"variable": "USB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Pinturas",
+							"sid": 248321453478372,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Acrilicos_Bandeja",
+							"sid": 140113785658359
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PinturaCaida",
+							"sid": 176945551261906,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 671376661564256
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "PinturaCaida",
+							"sid": 367704591256992
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Exclamación",
+							"sid": 845135537665082,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 791524261845408,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Exclamación",
+							"sid": 801811542709512
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 269040394580561,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "DesalvoWorker",
+							"sid": 537418209414912,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "292",
+								"end-y": "417",
+								"time": "1",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "BloqueoPasoDesalvo",
+							"sid": 680463721831673,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Ojo",
+							"sid": 386098505437247,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 699097962145289
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 468177094649077
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Exclamación",
+							"sid": 692304559059256,
+							"parameters": {
+								"x": "DesalvoWorker.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Exclamación",
+							"sid": 147533256402719,
+							"parameters": {
+								"y": "DesalvoWorker.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Ojo",
+							"sid": 495645924174416,
+							"parameters": {
+								"x": "DesalvoWorker.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Ojo",
+							"sid": 788136601452825,
+							"parameters": {
+								"y": "DesalvoWorker.Y-32"
+							}
+						}
+					],
+					"sid": 556839254436131
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 756542839406025,
+							"parameters": {
+								"object": "Trigger_Impresora"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Impresora",
+							"sid": 148125928078538,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter10",
+							"sid": 855449034363996,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 745760581267252
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 369446818460197
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter10",
+							"sid": 651594928667087,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 741666393743233
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 927901899262842,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 457408063519373,
+							"parameters": {
+								"object": "Trigger_Impresora"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Impresora",
+							"sid": 723032239372432,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 318491953465217,
+							"parameters": {
+								"variable": "USB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Impresora",
+							"sid": 489972362422224,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 771807505344304,
+							"parameters": [
+								"\"(Intentas colocar el USB y no entra)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 855791704135572,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 467835677640208,
+							"parameters": [
+								"\"(Usas tu hocico para girarlo y volverlo a intentar)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 367289841428617,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 806850371612898,
+							"parameters": [
+								"\"(No entra... Usas nuevamente el hocico e intentas colocar el USB)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 654110083984056,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 914078553575949,
+							"parameters": [
+								"\"(El USB se inserta y la fotocopiadora imprime sola por arte de magia)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 462978278289173,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 580538152086665
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 487617132702919,
+							"parameters": {
+								"variable": "USBOFF",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 170427128348800,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 737952492077309,
+							"parameters": {
+								"object-to-create": "HojasBienImpresas",
+								"layer": "\"PersonajesDesalvo\"",
+								"x": "544",
+								"y": "384",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 663856288230620,
+							"parameters": {
+								"variable": "PajaroInventario"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "USB",
+							"sid": 338082978078728
+						}
+					],
+					"sid": 842431300433095
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "HojasBienImpresas",
+							"sid": 266797933584636
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 818288379501945,
+							"parameters": {
+								"object": "HojasBienImpresas"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 538056584798209,
+							"parameters": {
+								"variable": "Capinventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "HojasBienImpresas",
+							"sid": 769782665661072
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 406984766033649,
+							"parameters": {
+								"variable": "Capinventario",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 110994351561699,
+							"parameters": {
+								"variable": "HojasImpresas",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trigger_Impresora",
+							"sid": 462554133388407
+						}
+					],
+					"sid": 896631514742285
+				}
+			],
+			"sid": 433979212658680,
+			"background-color": [
+				0.30980392156862746,
+				0.21568627450980393,
+				0.42745098039215684,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Group6",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 378301509131119
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter12",
+							"sid": 706928704032654,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter12",
+							"sid": 850681255414221,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 153757624100434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 502109619979126,
+							"parameters": {
+								"variable": "HojaCompletado"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Trigger_Hojas",
+							"sid": 243081979098574
+						}
+					],
+					"sid": 399346102045239
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 979867359457188,
+							"parameters": {
+								"variable": "HojaCompletado"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 291690623289193,
+							"parameters": {
+								"variable": "MisionEncendedor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Clon",
+							"sid": 826807246773040,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 481458006358231
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 335978863366921,
+							"parameters": {
+								"object": "Trigger_Clon"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Clon",
+							"sid": 158564536045715,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter12",
+							"sid": 585812291404081,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 926226068546898
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 622663166572643
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter12",
+							"sid": 263031327860477,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 459503716398202
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 420600796939566,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 779441313815075,
+							"parameters": {
+								"object": "Trigger_Clon"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trigger_Clon",
+							"sid": 965492098817935,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trigger_Clon",
+							"sid": 232631217647452,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 774495399520036,
+							"parameters": [
+								"\"Ya estoy ya llegué...\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 213329017860057,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 465324939169694,
+							"parameters": [
+								"\"(Se empieza a tocar los bolsillos buscando algo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 742979424540117,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 307448575376712,
+							"parameters": [
+								"\"(Se le cae el encendedor, quizás sirva de algo)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 916908034173895,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 687480500579528
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 222876829060916,
+							"parameters": {
+								"variable": "HojasImpresasOFF",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 456871395058034,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 637440867293654,
+							"parameters": {
+								"object-to-create": "Encendedor",
+								"layer": "\"clon\"",
+								"x": "1312",
+								"y": "1248",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 184828908295382,
+							"parameters": {
+								"variable": "PajaroInventario"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "HojasBienImpresas",
+							"sid": 176456153447324
+						}
+					],
+					"sid": 529683265168082
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 547497906781247,
+							"parameters": {
+								"object": "Encendedor"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 351356009270191,
+							"parameters": {
+								"variable": "PajaroInventario"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Encendedor",
+							"sid": 458466755867480
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 341691278136426,
+							"parameters": {
+								"variable": "PajaroInventario",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 267928720082890,
+							"parameters": {
+								"variable": "Encendedor",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 957976511909031
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 376055351742597,
+							"parameters": {
+								"variable": "Encendedor"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 839950594585937,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 829726638942692
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 484593758585405,
+									"parameters": {
+										"object-to-create": "Encendedor",
+										"layer": "\"InventarioHUD\"",
+										"x": "64",
+										"y": "320",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Encendedor",
+									"sid": 764038989444668
+								}
+							],
+							"sid": 795791598402725
+						}
+					]
+				}
+			],
+			"sid": 882885715528693
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FUEGO2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 664834656058980
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter13",
+							"sid": 161331942148241,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter13",
+							"sid": 353559067601348,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter14",
+							"sid": 435491769583235,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter14",
+							"sid": 866413617460686,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Press_Enter15",
+							"sid": 132873154103960,
+							"parameters": {
+								"x": "EnriquetaLaCuadrada.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Press_Enter15",
+							"sid": 149141448548034,
+							"parameters": {
+								"y": "EnriquetaLaCuadrada.Y-32"
+							}
+						}
+					],
+					"sid": 267132245319539
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 328017364089101,
+							"parameters": {
+								"variable": "MisionMover"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 289537765981926,
+							"parameters": {
+								"variable": "Mision0_Empezar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TriggerFuego",
+							"sid": 448718637857630,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 687991845855740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 988483647314616,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 667573360920519,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter13",
+							"sid": 228702282030033,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 449711212124684
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 970296078226412
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter13",
+							"sid": 893463052245017,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 902508838024375
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 807088661167608,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 834852605795376,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 172613162557310,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TriggerFuego",
+							"sid": 147250911555812,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 969764432238321,
+							"parameters": [
+								"\"(Está parpadeando)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 411635259988529,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 322410672296359
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Press_Enter13",
+							"sid": 650116642928929
+						}
+					],
+					"sid": 340902819380203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 578669368627359,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 864735000947520,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter14",
+							"sid": 606084932724743,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 245196285773918
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 131972192406435
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter14",
+							"sid": 660500362767120,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 173790305293156
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 226598298085560,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 298329626041649,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 780023230725020,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TriggerFuego",
+							"sid": 407998952052666,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-2"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 657360818897258,
+							"parameters": [
+								"\"(Está parpadeando, Seguro un poco de humo puede crear una distracción)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 983818136198319,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 357094202978171
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 579838488657809,
+							"parameters": {
+								"variable": "MisionEncendedor",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Press_Enter14",
+							"sid": 195981305733103
+						}
+					],
+					"sid": 797763325967113
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 107465705232042,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 210116476627892,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter15",
+							"sid": 466689433793045,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 734905397834975
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 993617947375336
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Press_Enter15",
+							"sid": 724737765512305,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 834245390517547
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 118243793612417,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnriquetaLaCuadrada",
+							"sid": 210981020933751,
+							"parameters": {
+								"object": "TriggerFuego"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TriggerFuego",
+							"sid": 931458915353843,
+							"parameters": {
+								"instance-variable": "ID",
+								"comparison": 0,
+								"value": "-2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 317528514033420,
+							"parameters": {
+								"variable": "Encendedor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TriggerFuego",
+							"sid": 764412603155184,
+							"parameters": {
+								"instance-variable": "ID",
+								"value": "-3"
+							}
+						},
+						{
+							"callFunction": "Dialogo",
+							"sid": 655880292626267,
+							"parameters": [
+								"\"(Un par de chispas... Una gran luz... MUCHO CALOR)\""
+							]
+						},
+						{
+							"id": "wait-for-signal",
+							"objectClass": "System",
+							"sid": 667285633897077,
+							"parameters": {
+								"tag": "\"Siguiente\""
+							}
+						},
+						{
+							"callFunction": "DestruirDialogo",
+							"sid": 839282188156734
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 352089153481280,
+							"parameters": {
+								"variable": "EncendedorOFF",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FUEGO",
+							"sid": 765562476689018,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 746664986658262,
+							"parameters": {
+								"variable": "GuardiasFuera",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 961553777412935
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 638116198778785,
+							"parameters": {
+								"variable": "GuardiasFuera"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Barrera_Escaleras",
+							"sid": 983497819567488,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Guardia1",
+							"sid": 206563609339596
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Guardia2",
+							"sid": 311634688415547
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Guardia3",
+							"sid": 974522897264855
+						}
+					],
+					"sid": 308139744830908
+				}
+			],
+			"sid": 272874851622538
+		}
+	],
+	"sid": 754987530988912
+}

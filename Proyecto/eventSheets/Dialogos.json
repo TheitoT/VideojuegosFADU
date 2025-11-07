@@ -151,17 +151,60 @@
 			"sid": 371566314370690
 		},
 		{
-			"functionName": "AtraparJugador",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [],
-			"sid": 462759767419458
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 469443792006089,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Dialogo",
+					"sid": 407497916705659
+				}
+			],
+			"actions": [
+				{
+					"id": "typewriter-finish",
+					"objectClass": "Dialogo",
+					"sid": 891115202489659
+				}
+			],
+			"sid": 439837913191392
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 634649275886933,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "Dialogo",
+					"sid": 309395295010243,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 533668383285297,
+					"parameters": {
+						"tag": "\"Siguiente\""
+					}
+				}
+			],
+			"sid": 511654368143040
 		}
 	],
 	"sid": 366304931335047

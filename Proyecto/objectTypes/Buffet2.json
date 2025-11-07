@@ -1,0 +1,62 @@
+{
+	"name": "Buffet2",
+	"plugin-id": "Sprite",
+	"sid": 931548120088242,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 521930231883517
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 193,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2620180,
+						"collisionPoly": {
+							"points": [
+								0.49705112345812674,
+								0.41923109875009057,
+								0.7623533922948504,
+								0.4127728054287946,
+								0.7618328808086816,
+								0,
+								0.9121225899948472,
+								0,
+								0.9115842846412792,
+								1,
+								0.496049153443958,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 685857742689461,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

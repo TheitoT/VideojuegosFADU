@@ -1,0 +1,76 @@
+{
+	"name": "ImpresoraMal",
+	"plugin-id": "Sprite",
+	"sid": 770721624282874,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 743461413618691
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 26,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1201299,
+						"collisionPoly": {
+							"points": [
+								0.038461538461538464,
+								0.027777777777777776,
+								0.8846153846153846,
+								0.05555555555555555,
+								0.9230769230769231,
+								0.08333333333333333,
+								0.9230769230769231,
+								0.25,
+								0.8846153846153846,
+								0.6111111111111112,
+								0.8076923076923077,
+								0.8055555555555556,
+								0.7692307692307693,
+								0.8611111111111112,
+								0.7307692307692307,
+								0.8888888888888888,
+								0.5,
+								0.9722222222222222,
+								0.38461538461538464,
+								0.9722222222222222,
+								0.23076923076923078,
+								0.9444444444444444,
+								0.15384615384615385,
+								0.8888888888888888,
+								0.038461538461538464,
+								0.2222222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 100515785163217,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

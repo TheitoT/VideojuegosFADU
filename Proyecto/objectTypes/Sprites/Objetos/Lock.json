@@ -10,6 +10,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 229874362400931
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 249802557916195
 		}
 	],
 	"effectTypes": [],
@@ -18,7 +23,7 @@
 			{
 				"frames": [
 					{
-						"width": 32,
+						"width": 64,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -26,7 +31,47 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7228540,
+						"imageSpriteId": 3474337,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3125,
+								1,
+								0.3125,
+								1,
+								0.65625,
+								0,
+								0.65625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7169482,
+						"collisionPoly": {
+							"points": [
+								0.1701388888888887,
+								0.9965277777777778,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0,
+								0.17303240740740736,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -38,7 +83,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []

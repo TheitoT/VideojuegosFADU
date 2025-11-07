@@ -26,7 +26,7 @@
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
