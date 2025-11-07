@@ -1,0 +1,104 @@
+{
+	"name": "guardiapatio2",
+	"plugin-id": "Sprite",
+	"sid": 157727396827974,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "UltimaX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 418295312986888
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 245884073697964
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8055890,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.125,
+								0.625,
+								0.125,
+								0.75,
+								0.1875,
+								0.8125,
+								0.34375,
+								0.6875,
+								1,
+								0.3125,
+								1,
+								0.25,
+								0.90625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1528625,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0.125,
+								0.75,
+								0.125,
+								0.75,
+								0.90625,
+								0.6875,
+								1,
+								0.3125,
+								1,
+								0.1875,
+								0.3125,
+								0.25,
+								0.1875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 887272810667046,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

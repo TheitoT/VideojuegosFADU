@@ -203,7 +203,13 @@
 			"Sprite30",
 			"Estudiante13",
 			"Sprite31",
-			"Sprite32"
+			"Sprite32",
+			"viaje_final",
+			"Text",
+			"MENU_ADIOS",
+			"creditos",
+			"guardiapatio2",
+			"GuardiaPatio3"
 		],
 		"subfolders": [
 			{
@@ -246,7 +252,9 @@
 					"CargaSoltar_Enrique",
 					"CargaSoltar_Enriqueta",
 					"Trigger_OBJ_1",
-					"Trigger_OBJ_2"
+					"Trigger_OBJ_2",
+					"ConoVision2",
+					"ConoVision3"
 				],
 				"subfolders": [
 					{
@@ -478,7 +486,8 @@
 			"Alumnos",
 			"Desalvo",
 			"Opciones",
-			"Comedor"
+			"Comedor",
+			"final, mensaje"
 		],
 		"subfolders": []
 	},

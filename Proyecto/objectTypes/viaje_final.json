@@ -1,54 +1,32 @@
 {
-	"name": "Gaseosas",
+	"name": "viaje_final",
 	"plugin-id": "Sprite",
-	"sid": 815717840149014,
+	"sid": 842774793970814,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 365691361307972
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 64,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8297322,
-						"collisionPoly": {
-							"points": [
-								0.0625,
-								0,
-								0.9375,
-								0,
-								1,
-								0.03125,
-								1,
-								1,
-								0,
-								1,
-								0,
-								0.03125
-							]
-						},
+						"imageSpriteId": 8491562,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 851302656149725,
+				"sid": 743099723204768,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,0 +1,110 @@
+{
+	"name": "ConoVision2",
+	"plugin-id": "Sprite",
+	"sid": 274897691034212,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 859980127528854
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.988,
+						"originY": 0.516,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1600712,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.11921738201638937,
+								1,
+								0.503999969482422,
+								1,
+								0.523999877929687,
+								0,
+								0.9120868344514262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.988,
+						"originY": 0.516,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9336080,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.11921738201638937,
+								1,
+								0.503999969482422,
+								1,
+								0.523999877929687,
+								0,
+								0.9120868344514262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.988,
+						"originY": 0.516,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5156377,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.11921738201638937,
+								1,
+								0.503999969482422,
+								1,
+								0.523999877929687,
+								0,
+								0.9120868344514262
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0,
+						"tag": ""
+					}
+				],
+				"sid": 109080237512066,
+				"name": "ConoVision1_Animación",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
